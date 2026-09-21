@@ -1,0 +1,1084 @@
+{
+  "schema_version": 1,
+  "verified_on": "2026-09-21",
+  "verification_basis": "Documentation research snapshot associated with discovery inventory captured 2026-09-21. Source extracts do not carry per-page fetch timestamps; this is a snapshot attribution, not a claim of individual URL re-fetches or live tenant verification. Publication/changelog dates are retained separately in notes. No network or live APIs used in drafting.",
+  "status_definitions": {
+    "official-public": "Official documentation supports the named operation/behavior to the stated evidence level; not proof of implementation, entitlement or user authority.",
+    "observed-internal": "Sanitized local operational observation, not official public support or current tenant verification.",
+    "ui-only": "Owner/UI setup workflow identified; not a public API operation.",
+    "unverified": "Not established in reviewed evidence, conflicting, or integration-specific; disabled pending verification. Negative scope review is not a universal claim that the vendor lacks the feature."
+  },
+  "source_url_policy": "Official URLs are provenance values, not local Markdown links. Null means no official source exists for the local/integration observation; never present an official homepage as proof of an internal method.",
+  "operations": [
+    {
+      "operation": "authentication.api-key",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/b87d37ae48a0d-authentication",
+      "verified_on": "2026-09-21",
+      "notes": "Authorization: Token <API_KEY>; do not use Bearer for an API key.",
+      "evidence_level": "research-summary"
+    },
+    {
+      "operation": "authentication.partner-oauth",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/b87d37ae48a0d-authentication",
+      "verified_on": "2026-09-21",
+      "notes": "Official integration partners only; Authorization: Bearer <OAUTH_ACCESS_TOKEN>; read grant expiry; no universal granular scope catalog verified.",
+      "evidence_level": "research-summary"
+    },
+    {
+      "operation": "authentication.read-only-key",
+      "status": "official-public",
+      "source_url": "https://help.housecallpro.com/en/articles/8505035-api-overview",
+      "verified_on": "2026-09-21",
+      "notes": "Admin-generated Read-only and Full access key options; Help publication date 2026-07-08 is not the research verification date.",
+      "evidence_level": "research-summary"
+    },
+    {
+      "operation": "entitlement.plan",
+      "status": "unverified",
+      "source_url": "https://help.housecallpro.com/en/articles/8505035-api-overview",
+      "verified_on": "2026-09-21",
+      "notes": "Conflict unresolved: Help says MAX, developer homepage says MAX or XL. Confirm tenant entitlement.",
+      "evidence_level": "research-summary"
+    },
+    {
+      "operation": "company.read",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/06ba3d648e345-changelog",
+      "verified_on": "2026-09-21",
+      "notes": "GET /company documented in research; company-specific authorization still required.",
+      "evidence_level": "research-summary"
+    },
+    {
+      "operation": "company.multi-location-select",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/4c64fe617d191-multi-location-enabled-ap-is",
+      "verified_on": "2026-09-21",
+      "notes": "X-Company-Id overrides location_ids. Owning location and descendants only for keys; OAuth may be narrower.",
+      "evidence_level": "research-summary"
+    },
+    {
+      "operation": "company.franchise-metadata-update",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/06ba3d648e345-changelog",
+      "verified_on": "2026-09-21",
+      "notes": "PATCH operation documented; individual path/body not extracted. Admin impact approval and schema verification required.",
+      "evidence_level": "changelog-family"
+    },
+    {
+      "operation": "pagination.routes",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/8d0d12e41a38b-get-routes",
+      "verified_on": "2026-09-21",
+      "notes": "Request page/per_page; response page_size/total_pages/total_items. No universal page-size maximum established.",
+      "evidence_level": "endpoint-extract",
+      "method": "GET",
+      "path": "/routes"
+    },
+    {
+      "operation": "rate-limit.recovery",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/",
+      "verified_on": "2026-09-21",
+      "notes": "429 RateLimit-Reset is epoch; bounded reset-aware retry plus jitter. No universal numeric request ceiling verified.",
+      "evidence_level": "research-summary"
+    },
+    {
+      "operation": "customers.list",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/042bd3bf861ae-get-customers",
+      "verified_on": "2026-09-21",
+      "notes": "q is candidate search, not unique identity; expand attachments/do_not_service; page/page_size.",
+      "evidence_level": "endpoint-extract",
+      "method": "GET",
+      "path": "/customers"
+    },
+    {
+      "operation": "employees.list-active",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/303ee235f23fa-get-employees",
+      "verified_on": "2026-09-21",
+      "notes": "Only active employees; role/permissions are data, not caller authorization. page/page_size.",
+      "evidence_level": "endpoint-extract",
+      "method": "GET",
+      "path": "/employees"
+    },
+    {
+      "operation": "jobs.list",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/6c97704da8bf3-get-jobs",
+      "verified_on": "2026-09-21",
+      "notes": "customer_id supported; scheduled time bounds; query completed differs from response complete rated/complete unrated; page/page_size.",
+      "evidence_level": "endpoint-extract",
+      "method": "GET",
+      "path": "/jobs"
+    },
+    {
+      "operation": "estimates.list",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/e430ba3d520a0-get-estimates",
+      "verified_on": "2026-09-21",
+      "notes": "customer_id supported; parent and option identities/statuses remain separate; page/page_size.",
+      "evidence_level": "endpoint-extract",
+      "method": "GET",
+      "path": "/estimates"
+    },
+    {
+      "operation": "invoices.list",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/65ce9f430d605-get-invoices",
+      "verified_on": "2026-09-21",
+      "notes": "customer_uuid array, not customer_id; page/page_size; prove invoice-to-job-to-customer joins.",
+      "evidence_level": "endpoint-extract",
+      "method": "GET",
+      "path": "/invoices"
+    },
+    {
+      "operation": "schedule.settings-read",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/898190c92fb8b-schedule-windows",
+      "verified_on": "2026-09-21",
+      "notes": "Organization business hours and bookable windows.",
+      "evidence_level": "endpoint-extract",
+      "method": "GET",
+      "path": "/company/schedule_availability"
+    },
+    {
+      "operation": "schedule.booking-windows-read",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/c80920efe7ef1-booking-windows",
+      "verified_on": "2026-09-21",
+      "notes": "Duration: positive service_duration overrides service configured duration, else 30 minutes; returned UTC windows are not reservations.",
+      "evidence_level": "endpoint-extract",
+      "method": "GET",
+      "path": "/company/schedule_availability/booking_windows"
+    },
+    {
+      "operation": "routes.list",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/8d0d12e41a38b-get-routes",
+      "verified_on": "2026-09-21",
+      "notes": "Date YYYY-MM-DD; request per_page; employee/appointment/event/estimate grouping only.",
+      "evidence_level": "endpoint-extract",
+      "method": "GET",
+      "path": "/routes"
+    },
+    {
+      "operation": "events.list",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/5f8b2b787f4ba-get-events",
+      "verified_on": "2026-09-21",
+      "notes": "Calendar events, not audit events; page/page_size; all_day and recurrence_rule; no date filter extracted.",
+      "evidence_level": "endpoint-extract",
+      "method": "GET",
+      "path": "/events"
+    },
+    {
+      "operation": "customers.create",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/4e0bf8c4d65d7-create-customer",
+      "verified_on": "2026-09-21",
+      "notes": "Named operation and method shown in official expanded sidebar. Full path, request schema, permissions and side effects require operation-specific verification before implementation.",
+      "evidence_level": "expanded-sidebar",
+      "method": "POST"
+    },
+    {
+      "operation": "customers.read",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/7599b1ec89338-get-customer",
+      "verified_on": "2026-09-21",
+      "notes": "Named operation and method shown in official expanded sidebar. Full path, request schema, permissions and side effects require operation-specific verification before implementation.",
+      "evidence_level": "expanded-sidebar",
+      "method": "GET"
+    },
+    {
+      "operation": "customers.update",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/b1c3acd657849-update-customer",
+      "verified_on": "2026-09-21",
+      "notes": "Named operation and method shown in official expanded sidebar. Full path, request schema, permissions and side effects require operation-specific verification before implementation.",
+      "evidence_level": "expanded-sidebar",
+      "method": "PUT"
+    },
+    {
+      "operation": "customers.addresses.list",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/abdc4e24d762b-get-all-of-a-customer-s-addresses",
+      "verified_on": "2026-09-21",
+      "notes": "Named operation and method shown in official expanded sidebar. Full path, request schema, permissions and side effects require operation-specific verification before implementation.",
+      "evidence_level": "expanded-sidebar",
+      "method": "GET"
+    },
+    {
+      "operation": "customers.addresses.create",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/6cf593d8a90ca-create-an-address-on-a-customer",
+      "verified_on": "2026-09-21",
+      "notes": "Named operation and method shown in official expanded sidebar. Full path, request schema, permissions and side effects require operation-specific verification before implementation.",
+      "evidence_level": "expanded-sidebar",
+      "method": "POST"
+    },
+    {
+      "operation": "customers.addresses.read",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/721b19310aa3b-get-a-customer-s-address",
+      "verified_on": "2026-09-21",
+      "notes": "Named operation and method shown in official expanded sidebar. Full path, request schema, permissions and side effects require operation-specific verification before implementation.",
+      "evidence_level": "expanded-sidebar",
+      "method": "GET"
+    },
+    {
+      "operation": "jobs.create",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/2dcf481ed7d69-create-a-job",
+      "verified_on": "2026-09-21",
+      "notes": "Named operation and method shown in official expanded sidebar. Full path, request schema, permissions and side effects require operation-specific verification before implementation.",
+      "evidence_level": "expanded-sidebar",
+      "method": "POST"
+    },
+    {
+      "operation": "jobs.read",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/bbabd67bed1ab-get-a-job",
+      "verified_on": "2026-09-21",
+      "notes": "Named operation and method shown in official expanded sidebar. Full path, request schema, permissions and side effects require operation-specific verification before implementation.",
+      "evidence_level": "expanded-sidebar",
+      "method": "GET"
+    },
+    {
+      "operation": "jobs.attachments.add",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/c4ea6b1217b22-add-an-attachment-to-a-job",
+      "verified_on": "2026-09-21",
+      "notes": "Named operation and method shown in official expanded sidebar. Full path, request schema, permissions and side effects require operation-specific verification before implementation. Changelog requires local binary uploads, not arbitrary remote URLs (2024-04-24).",
+      "evidence_level": "expanded-sidebar",
+      "method": "POST"
+    },
+    {
+      "operation": "jobs.line-items.list",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/1c84b6c79b94f-lists-all-line-items-for-a-job",
+      "verified_on": "2026-09-21",
+      "notes": "Named operation and method shown in official expanded sidebar. Full path, request schema, permissions and side effects require operation-specific verification before implementation.",
+      "evidence_level": "expanded-sidebar",
+      "method": "GET"
+    },
+    {
+      "operation": "jobs.line-items.add",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/99ba8250597cd-add-a-line-item-to-a-job",
+      "verified_on": "2026-09-21",
+      "notes": "Named operation and method shown in official expanded sidebar. Full path, request schema, permissions and side effects require operation-specific verification before implementation.",
+      "evidence_level": "expanded-sidebar",
+      "method": "POST"
+    },
+    {
+      "operation": "jobs.line-items.bulk-update",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/79a5ef20427d5-bulk-update-a-job-s-line-items",
+      "verified_on": "2026-09-21",
+      "notes": "Named operation and method shown in official expanded sidebar. Full path, request schema, permissions and side effects require operation-specific verification before implementation.",
+      "evidence_level": "expanded-sidebar",
+      "method": "PUT"
+    },
+    {
+      "operation": "jobs.line-items.update",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/7b05bc804ebcc-update-a-single-line-item-for-a-job",
+      "verified_on": "2026-09-21",
+      "notes": "Named operation and method shown in official expanded sidebar. Full path, request schema, permissions and side effects require operation-specific verification before implementation.",
+      "evidence_level": "expanded-sidebar",
+      "method": "PUT"
+    },
+    {
+      "operation": "jobs.line-items.delete",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/0c05c275eede7-delete-a-single-line-item-for-a-job",
+      "verified_on": "2026-09-21",
+      "notes": "Named operation and method shown in official expanded sidebar. Full path, request schema, permissions and side effects require operation-specific verification before implementation.",
+      "evidence_level": "expanded-sidebar",
+      "method": "DELETE"
+    },
+    {
+      "operation": "jobs.schedule.update",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/1d344f58672f9-update-job-schedule",
+      "verified_on": "2026-09-21",
+      "notes": "Named operation and method shown in official expanded sidebar. Full path, request schema, permissions and side effects require operation-specific verification before implementation.",
+      "evidence_level": "expanded-sidebar",
+      "method": "PUT"
+    },
+    {
+      "operation": "jobs.schedule.delete",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/7c3db70353a4f-delete-job-schedule",
+      "verified_on": "2026-09-21",
+      "notes": "Named operation and method shown in official expanded sidebar. Full path, request schema, permissions and side effects require operation-specific verification before implementation.",
+      "evidence_level": "expanded-sidebar",
+      "method": "DELETE"
+    },
+    {
+      "operation": "jobs.dispatch",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/7395e7ae9c4e7-dispatch-job-to-employees",
+      "verified_on": "2026-09-21",
+      "notes": "Named operation and method shown in official expanded sidebar. Full path, request schema, permissions and side effects require operation-specific verification before implementation.",
+      "evidence_level": "expanded-sidebar",
+      "method": "PUT"
+    },
+    {
+      "operation": "jobs.input-materials.list",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/024edad38a2a2-lists-all-job-input-materials-for-a-job",
+      "verified_on": "2026-09-21",
+      "notes": "Named operation and method shown in official expanded sidebar. Full path, request schema, permissions and side effects require operation-specific verification before implementation.",
+      "evidence_level": "expanded-sidebar",
+      "method": "GET"
+    },
+    {
+      "operation": "jobs.input-materials.bulk-update",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/ecc9f7a5d84bc-bulk-update-a-job-s-input-materials",
+      "verified_on": "2026-09-21",
+      "notes": "Named operation and method shown in official expanded sidebar. Full path, request schema, permissions and side effects require operation-specific verification before implementation.",
+      "evidence_level": "expanded-sidebar",
+      "method": "PUT"
+    },
+    {
+      "operation": "jobs.tags.add",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/f9f47b5268bae-add-job-tag",
+      "verified_on": "2026-09-21",
+      "notes": "Named operation and method shown in official expanded sidebar. Full path, request schema, permissions and side effects require operation-specific verification before implementation.",
+      "evidence_level": "expanded-sidebar",
+      "method": "POST"
+    },
+    {
+      "operation": "jobs.notes.add",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/62185fa6f6afc-add-job-note",
+      "verified_on": "2026-09-21",
+      "notes": "Named operation and method shown in official expanded sidebar. Full path, request schema, permissions and side effects require operation-specific verification before implementation.",
+      "evidence_level": "expanded-sidebar",
+      "method": "POST"
+    },
+    {
+      "operation": "jobs.notes.delete",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/e3423d7dc7d5f-delete-job-note",
+      "verified_on": "2026-09-21",
+      "notes": "Named operation and method shown in official expanded sidebar. Full path, request schema, permissions and side effects require operation-specific verification before implementation.",
+      "evidence_level": "expanded-sidebar",
+      "method": "DELETE"
+    },
+    {
+      "operation": "jobs.tags.remove",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/f34ea2077256c-remove-job-tag",
+      "verified_on": "2026-09-21",
+      "notes": "Named operation and method shown in official expanded sidebar. Full path, request schema, permissions and side effects require operation-specific verification before implementation.",
+      "evidence_level": "expanded-sidebar",
+      "method": "DELETE"
+    },
+    {
+      "operation": "jobs.links.create",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/083bf9924aa4b-create-job-link",
+      "verified_on": "2026-09-21",
+      "notes": "Named operation and method shown in official expanded sidebar. Full path, request schema, permissions and side effects require operation-specific verification before implementation.",
+      "evidence_level": "expanded-sidebar",
+      "method": "POST"
+    },
+    {
+      "operation": "jobs.lock",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/90211f98061d0-lock-job",
+      "verified_on": "2026-09-21",
+      "notes": "Named operation and method shown in official expanded sidebar. Full path, request schema, permissions and side effects require operation-specific verification before implementation.",
+      "evidence_level": "expanded-sidebar",
+      "method": "POST"
+    },
+    {
+      "operation": "jobs.bulk-lock",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/30432b125d051-lock-jobs",
+      "verified_on": "2026-09-21",
+      "notes": "Named operation and method shown in official expanded sidebar. Full path, request schema, permissions and side effects require operation-specific verification before implementation. Changelog: POST /jobs/lock requires nonempty valid statuses scheduled/in_progress/completed since 2026-06-22. Never probe on live jobs.",
+      "evidence_level": "expanded-sidebar",
+      "method": "POST"
+    },
+    {
+      "operation": "estimates.create",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/4004d373be14c-create-an-estimate",
+      "verified_on": "2026-09-21",
+      "notes": "Named operation and method shown in official expanded sidebar. Full path, request schema, permissions and side effects require operation-specific verification before implementation.",
+      "evidence_level": "expanded-sidebar",
+      "method": "POST"
+    },
+    {
+      "operation": "estimates.read",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/eae5e9c092ef2-get-a-single-estimate-by-id",
+      "verified_on": "2026-09-21",
+      "notes": "Named operation and method shown in official expanded sidebar. Full path, request schema, permissions and side effects require operation-specific verification before implementation.",
+      "evidence_level": "expanded-sidebar",
+      "method": "GET"
+    },
+    {
+      "operation": "estimates.options.create",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/7c8b4860d6947-create-an-estimate-option",
+      "verified_on": "2026-09-21",
+      "notes": "Named operation and method shown in official expanded sidebar. Full path, request schema, permissions and side effects require operation-specific verification before implementation.",
+      "evidence_level": "expanded-sidebar",
+      "method": "POST"
+    },
+    {
+      "operation": "estimates.options.attachments.create",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/4ab88e001feec-create-estimate-option-attachment",
+      "verified_on": "2026-09-21",
+      "notes": "Named operation and method shown in official expanded sidebar. Full path, request schema, permissions and side effects require operation-specific verification before implementation. Changelog requires local binary uploads, not arbitrary remote URLs (2024-04-24).",
+      "evidence_level": "expanded-sidebar",
+      "method": "POST"
+    },
+    {
+      "operation": "estimates.options.line-items.list",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/781468fb5da47-list-estimate-option-line-items",
+      "verified_on": "2026-09-21",
+      "notes": "Named operation and method shown in official expanded sidebar. Full path, request schema, permissions and side effects require operation-specific verification before implementation.",
+      "evidence_level": "expanded-sidebar",
+      "method": "GET"
+    },
+    {
+      "operation": "estimates.options.line-items.bulk-update",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/b3e4391f7853f-bulk-update-estimate-option-line-items",
+      "verified_on": "2026-09-21",
+      "notes": "Named operation and method shown in official expanded sidebar. Full path, request schema, permissions and side effects require operation-specific verification before implementation.",
+      "evidence_level": "expanded-sidebar",
+      "method": "PUT"
+    },
+    {
+      "operation": "estimates.options.links.create",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/67182797c6885-create-estimate-option-link",
+      "verified_on": "2026-09-21",
+      "notes": "Named operation and method shown in official expanded sidebar. Full path, request schema, permissions and side effects require operation-specific verification before implementation.",
+      "evidence_level": "expanded-sidebar",
+      "method": "POST"
+    },
+    {
+      "operation": "estimates.options.schedule.update",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/4a4b976948016-update-estimate-option-schedule",
+      "verified_on": "2026-09-21",
+      "notes": "Named operation and method shown in official expanded sidebar. Full path, request schema, permissions and side effects require operation-specific verification before implementation.",
+      "evidence_level": "expanded-sidebar",
+      "method": "PUT"
+    },
+    {
+      "operation": "estimates.options.notes.create",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/090b9a9974b5f-create-estimate-option-note",
+      "verified_on": "2026-09-21",
+      "notes": "Named operation and method shown in official expanded sidebar. Full path, request schema, permissions and side effects require operation-specific verification before implementation.",
+      "evidence_level": "expanded-sidebar",
+      "method": "POST"
+    },
+    {
+      "operation": "estimates.options.notes.delete",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/69f56d41204d0-delete-estimate-option-note",
+      "verified_on": "2026-09-21",
+      "notes": "Named operation and method shown in official expanded sidebar. Full path, request schema, permissions and side effects require operation-specific verification before implementation.",
+      "evidence_level": "expanded-sidebar",
+      "method": "DELETE"
+    },
+    {
+      "operation": "estimates.options.decline",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/29c6b44d432d6-decline-estimate-options",
+      "verified_on": "2026-09-21",
+      "notes": "Named operation and method shown in official expanded sidebar. Full path, request schema, permissions and side effects require operation-specific verification before implementation. Public support does not grant customer/operator approval authority.",
+      "evidence_level": "expanded-sidebar",
+      "method": "POST"
+    },
+    {
+      "operation": "estimates.options.approve",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/3a4df6de2ea28-approve-estimate-options",
+      "verified_on": "2026-09-21",
+      "notes": "Named operation and method shown in official expanded sidebar. Full path, request schema, permissions and side effects require operation-specific verification before implementation. Public support does not grant customer/operator approval authority.",
+      "evidence_level": "expanded-sidebar",
+      "method": "POST"
+    },
+    {
+      "operation": "invoices.read",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/0ae16219c3e58-get-invoice-by-uuid",
+      "verified_on": "2026-09-21",
+      "notes": "Named operation and method shown in official expanded sidebar. Full path, request schema, permissions and side effects require operation-specific verification before implementation.",
+      "evidence_level": "expanded-sidebar",
+      "method": "GET"
+    },
+    {
+      "operation": "invoices.preview",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/ae40a9286ba7c-preview-invoice-by-uuid",
+      "verified_on": "2026-09-21",
+      "notes": "Named operation and method shown in official expanded sidebar. Full path, request schema, permissions and side effects require operation-specific verification before implementation.",
+      "evidence_level": "expanded-sidebar",
+      "method": "GET"
+    },
+    {
+      "operation": "events.read",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/fe60e7ed64a85-get-the-event-via-id",
+      "verified_on": "2026-09-21",
+      "notes": "Named operation and method shown in official expanded sidebar. Full path, request schema, permissions and side effects require operation-specific verification before implementation.",
+      "evidence_level": "expanded-sidebar",
+      "method": "GET"
+    },
+    {
+      "operation": "schedule.settings-update",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/ec4094ae3e2ee-update-a-company-s-schedule-windows",
+      "verified_on": "2026-09-21",
+      "notes": "Named operation and method shown in official expanded sidebar. Full path, request schema, permissions and side effects require operation-specific verification before implementation.",
+      "evidence_level": "expanded-sidebar",
+      "method": "PUT"
+    },
+    {
+      "operation": "invoices.split-allocation",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/65ce9f430d605-get-invoices",
+      "verified_on": "2026-09-21",
+      "notes": "Use invoice-item invoiced_amount for allocated split/progress amounts; amount may repeat original value; null allocation remains unknown.",
+      "evidence_level": "endpoint-extract-and-research-summary"
+    },
+    {
+      "operation": "invoices.embedded-payment-records",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/65ce9f430d605-get-invoices",
+      "verified_on": "2026-09-21",
+      "notes": "Read payments with invoice; not charge/refund/payment-record-write support.",
+      "evidence_level": "endpoint-extract"
+    },
+    {
+      "operation": "jobs.invoices.list",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/06ba3d648e345-changelog",
+      "verified_on": "2026-09-21",
+      "notes": "Per-job invoice read documented in changelog; exact schema must be verified.",
+      "evidence_level": "changelog-family"
+    },
+    {
+      "operation": "estimates.approval-status-timestamp",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/06ba3d648e345-changelog",
+      "verified_on": "2026-09-21",
+      "notes": "approval_status_updated_at is last approval-status transition, not approved-at; decline changes it and clear may yield null.",
+      "evidence_level": "research-summary"
+    },
+    {
+      "operation": "schedule.local-display-fields",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/06ba3d648e345-changelog",
+      "verified_on": "2026-09-21",
+      "notes": "time_zone, scheduled_start_local, scheduled_end_local documented 2026-08-20; UTC fields unchanged and local values may be null.",
+      "evidence_level": "research-summary"
+    },
+    {
+      "operation": "pricebook.materials.index",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/p5zsg5n9sbiij-pricebook-api",
+      "verified_on": "2026-09-21",
+      "notes": "Overview establishes operation family, not a reproduced detailed path/body schema. Organization-specific API key required; destructive/financial changes need explicit approval.",
+      "evidence_level": "overview-family"
+    },
+    {
+      "operation": "pricebook.materials.create",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/p5zsg5n9sbiij-pricebook-api",
+      "verified_on": "2026-09-21",
+      "notes": "Overview establishes operation family, not a reproduced detailed path/body schema. Organization-specific API key required; destructive/financial changes need explicit approval.",
+      "evidence_level": "overview-family"
+    },
+    {
+      "operation": "pricebook.materials.update",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/p5zsg5n9sbiij-pricebook-api",
+      "verified_on": "2026-09-21",
+      "notes": "Overview establishes operation family, not a reproduced detailed path/body schema. Organization-specific API key required; destructive/financial changes need explicit approval.",
+      "evidence_level": "overview-family"
+    },
+    {
+      "operation": "pricebook.materials.delete",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/p5zsg5n9sbiij-pricebook-api",
+      "verified_on": "2026-09-21",
+      "notes": "Overview establishes operation family, not a reproduced detailed path/body schema. Organization-specific API key required; destructive/financial changes need explicit approval.",
+      "evidence_level": "overview-family"
+    },
+    {
+      "operation": "pricebook.material-categories.index",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/p5zsg5n9sbiij-pricebook-api",
+      "verified_on": "2026-09-21",
+      "notes": "Overview establishes operation family, not a reproduced detailed path/body schema. Organization-specific API key required; destructive/financial changes need explicit approval.",
+      "evidence_level": "overview-family"
+    },
+    {
+      "operation": "pricebook.material-categories.create",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/p5zsg5n9sbiij-pricebook-api",
+      "verified_on": "2026-09-21",
+      "notes": "Overview establishes operation family, not a reproduced detailed path/body schema. Organization-specific API key required; destructive/financial changes need explicit approval.",
+      "evidence_level": "overview-family"
+    },
+    {
+      "operation": "pricebook.material-categories.update",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/p5zsg5n9sbiij-pricebook-api",
+      "verified_on": "2026-09-21",
+      "notes": "Overview establishes operation family, not a reproduced detailed path/body schema. Organization-specific API key required; destructive/financial changes need explicit approval.",
+      "evidence_level": "overview-family"
+    },
+    {
+      "operation": "pricebook.material-categories.delete",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/p5zsg5n9sbiij-pricebook-api",
+      "verified_on": "2026-09-21",
+      "notes": "Overview establishes operation family, not a reproduced detailed path/body schema. Organization-specific API key required; destructive/financial changes need explicit approval.",
+      "evidence_level": "overview-family"
+    },
+    {
+      "operation": "pricebook.price-forms.index",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/p5zsg5n9sbiij-pricebook-api",
+      "verified_on": "2026-09-21",
+      "notes": "Overview establishes operation family, not a reproduced detailed path/body schema. Organization-specific API key required; destructive/financial changes need explicit approval.",
+      "evidence_level": "overview-family"
+    },
+    {
+      "operation": "pricebook.price-forms.create",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/p5zsg5n9sbiij-pricebook-api",
+      "verified_on": "2026-09-21",
+      "notes": "Overview establishes operation family, not a reproduced detailed path/body schema. Organization-specific API key required; destructive/financial changes need explicit approval.",
+      "evidence_level": "overview-family"
+    },
+    {
+      "operation": "pricebook.price-forms.show",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/p5zsg5n9sbiij-pricebook-api",
+      "verified_on": "2026-09-21",
+      "notes": "Overview establishes operation family, not a reproduced detailed path/body schema. Organization-specific API key required; destructive/financial changes need explicit approval.",
+      "evidence_level": "overview-family"
+    },
+    {
+      "operation": "pricebook.price-forms.update",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/p5zsg5n9sbiij-pricebook-api",
+      "verified_on": "2026-09-21",
+      "notes": "Overview establishes operation family, not a reproduced detailed path/body schema. Organization-specific API key required; destructive/financial changes need explicit approval.",
+      "evidence_level": "overview-family"
+    },
+    {
+      "operation": "pricebook.price-forms.delete",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/p5zsg5n9sbiij-pricebook-api",
+      "verified_on": "2026-09-21",
+      "notes": "Overview establishes operation family, not a reproduced detailed path/body schema. Organization-specific API key required; destructive/financial changes need explicit approval.",
+      "evidence_level": "overview-family"
+    },
+    {
+      "operation": "pricebook.services.read-expanded",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/06ba3d648e345-changelog",
+      "verified_on": "2026-09-21",
+      "notes": "Service GET with expand[]=service_materials and expand[]=service_labor_rates; both lists default empty without expansion.",
+      "evidence_level": "changelog-family"
+    },
+    {
+      "operation": "job-types.list",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/06ba3d648e345-changelog",
+      "verified_on": "2026-09-21",
+      "notes": "Operation documented by changelog; individual method/path/body not extracted; no delete inferred.",
+      "evidence_level": "changelog-family"
+    },
+    {
+      "operation": "job-types.create",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/06ba3d648e345-changelog",
+      "verified_on": "2026-09-21",
+      "notes": "Operation documented by changelog; individual method/path/body not extracted; no delete inferred.",
+      "evidence_level": "changelog-family"
+    },
+    {
+      "operation": "job-types.update",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/06ba3d648e345-changelog",
+      "verified_on": "2026-09-21",
+      "notes": "Operation documented by changelog; individual method/path/body not extracted; no delete inferred.",
+      "evidence_level": "changelog-family"
+    },
+    {
+      "operation": "lead-sources.list",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/06ba3d648e345-changelog",
+      "verified_on": "2026-09-21",
+      "notes": "Operation documented by changelog; individual method/path/body not extracted; no delete inferred.",
+      "evidence_level": "changelog-family"
+    },
+    {
+      "operation": "lead-sources.create",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/06ba3d648e345-changelog",
+      "verified_on": "2026-09-21",
+      "notes": "Operation documented by changelog; individual method/path/body not extracted; no delete inferred.",
+      "evidence_level": "changelog-family"
+    },
+    {
+      "operation": "lead-sources.update",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/06ba3d648e345-changelog",
+      "verified_on": "2026-09-21",
+      "notes": "Operation documented by changelog; individual method/path/body not extracted; no delete inferred.",
+      "evidence_level": "changelog-family"
+    },
+    {
+      "operation": "tags.list",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/e8fa7b29f8a8b-get-tags",
+      "verified_on": "2026-09-21",
+      "notes": "Official indexed listing page; full endpoint schema not extracted. Do not invent pagination, mutation methods or payloads.",
+      "evidence_level": "official-index-only"
+    },
+    {
+      "operation": "service-zones.list",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/38b31504822e9-get-service-zones",
+      "verified_on": "2026-09-21",
+      "notes": "Official indexed listing page; full endpoint schema not extracted. Do not invent pagination, mutation methods or payloads.",
+      "evidence_level": "official-index-only"
+    },
+    {
+      "operation": "leads.list",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/06ba3d648e345-changelog",
+      "verified_on": "2026-09-21",
+      "notes": "Public operation family recorded by documentation research; full operation schema not extracted here. Lead conversion/status changes require separate authorization.",
+      "evidence_level": "research-family"
+    },
+    {
+      "operation": "leads.create",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/06ba3d648e345-changelog",
+      "verified_on": "2026-09-21",
+      "notes": "Public operation family recorded by documentation research; full operation schema not extracted here. Lead conversion/status changes require separate authorization.",
+      "evidence_level": "research-family"
+    },
+    {
+      "operation": "leads.read",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/06ba3d648e345-changelog",
+      "verified_on": "2026-09-21",
+      "notes": "Public operation family recorded by documentation research; full operation schema not extracted here. Lead conversion/status changes require separate authorization.",
+      "evidence_level": "research-family"
+    },
+    {
+      "operation": "leads.convert-to-job",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/06ba3d648e345-changelog",
+      "verified_on": "2026-09-21",
+      "notes": "Public operation family recorded by documentation research; full operation schema not extracted here. Lead conversion/status changes require separate authorization.",
+      "evidence_level": "research-family"
+    },
+    {
+      "operation": "leads.convert-to-estimate",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/06ba3d648e345-changelog",
+      "verified_on": "2026-09-21",
+      "notes": "Public operation family recorded by documentation research; full operation schema not extracted here. Lead conversion/status changes require separate authorization.",
+      "evidence_level": "research-family"
+    },
+    {
+      "operation": "pipeline.statuses.list",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/06ba3d648e345-changelog",
+      "verified_on": "2026-09-21",
+      "notes": "Public operation family recorded by documentation research; full operation schema not extracted here. Lead conversion/status changes require separate authorization.",
+      "evidence_level": "research-family"
+    },
+    {
+      "operation": "pipeline.lead-status-change",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/06ba3d648e345-changelog",
+      "verified_on": "2026-09-21",
+      "notes": "Public operation family recorded by documentation research; full operation schema not extracted here. Lead conversion/status changes require separate authorization.",
+      "evidence_level": "research-family"
+    },
+    {
+      "operation": "pipeline.job-status-change",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/06ba3d648e345-changelog",
+      "verified_on": "2026-09-21",
+      "notes": "Public operation family recorded by documentation research; full operation schema not extracted here. Lead conversion/status changes require separate authorization.",
+      "evidence_level": "research-family"
+    },
+    {
+      "operation": "pipeline.estimate-status-change",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/06ba3d648e345-changelog",
+      "verified_on": "2026-09-21",
+      "notes": "Public operation family recorded by documentation research; full operation schema not extracted here. Lead conversion/status changes require separate authorization.",
+      "evidence_level": "research-family"
+    },
+    {
+      "operation": "leads.line-items.list",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/06ba3d648e345-changelog",
+      "verified_on": "2026-09-21",
+      "notes": "Public operation family recorded by documentation research; full operation schema not extracted here. Lead conversion/status changes require separate authorization.",
+      "evidence_level": "research-family"
+    },
+    {
+      "operation": "webhooks.signature-validation",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/46e9e1be07621-webhooks",
+      "verified_on": "2026-09-21",
+      "notes": "HMAC SHA256 over timestamp + period + exact payload bytes; exact header/encoding must be verified by the adapter. Local replay/dedupe controls are recommendations.",
+      "evidence_level": "research-summary"
+    },
+    {
+      "operation": "webhooks.event-families",
+      "status": "official-public",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/46e9e1be07621-webhooks",
+      "verified_on": "2026-09-21",
+      "notes": "Job, appointment, customer, estimate, organization-app, lead and invoice events; event names do not establish mutation endpoints.",
+      "evidence_level": "research-summary"
+    },
+    {
+      "operation": "webhooks.individual-setup",
+      "status": "ui-only",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/46e9e1be07621-webhooks",
+      "verified_on": "2026-09-21",
+      "notes": "Individual setup uses owner/admin UI help; OAuth setup through HCP developer coordination. No setup API path asserted.",
+      "evidence_level": "research-summary"
+    },
+    {
+      "operation": "payments.charge",
+      "status": "unverified",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/65ce9f430d605-get-invoices",
+      "verified_on": "2026-09-21",
+      "notes": "No public charge operation established; payment records do not confer money movement.",
+      "evidence_level": "negative-scope-review"
+    },
+    {
+      "operation": "payments.refund",
+      "status": "unverified",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/65ce9f430d605-get-invoices",
+      "verified_on": "2026-09-21",
+      "notes": "No public refund operation established.",
+      "evidence_level": "negative-scope-review"
+    },
+    {
+      "operation": "payments.record-create",
+      "status": "unverified",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/65ce9f430d605-get-invoices",
+      "verified_on": "2026-09-21",
+      "notes": "No public payment-record POST established.",
+      "evidence_level": "negative-scope-review"
+    },
+    {
+      "operation": "payments.bank-card-payout-management",
+      "status": "unverified",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/65ce9f430d605-get-invoices",
+      "verified_on": "2026-09-21",
+      "notes": "No bank/card/payout management established.",
+      "evidence_level": "negative-scope-review"
+    },
+    {
+      "operation": "invoices.create-send-void",
+      "status": "unverified",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/65ce9f430d605-get-invoices",
+      "verified_on": "2026-09-21",
+      "notes": "No public create/send/void operation established. Internal invoice-send observations are separate, owner-gated, and not an implementation in this package.",
+      "evidence_level": "negative-scope-review"
+    },
+    {
+      "operation": "equipment.public-crud-attach",
+      "status": "unverified",
+      "source_url": "https://docs.housecallpro.com/",
+      "verified_on": "2026-09-21",
+      "notes": "No public equipment read/create/update/delete/attach contract established; internal property workflows are separate.",
+      "evidence_level": "negative-scope-review"
+    },
+    {
+      "operation": "service-plans.crud",
+      "status": "unverified",
+      "source_url": "https://docs.housecallpro.com/",
+      "verified_on": "2026-09-21",
+      "notes": "No membership/service-plan CRUD established; recurrence fields do not establish billing, renewals, entitlement or cancellation.",
+      "evidence_level": "negative-scope-review"
+    },
+    {
+      "operation": "checklists.operations",
+      "status": "unverified",
+      "source_url": "https://docs.housecallpro.com/",
+      "verified_on": "2026-09-21",
+      "notes": "Checklists navigation exists, but operation bodies, methods, payloads and permissions unresolved. Verification-required.",
+      "evidence_level": "negative-scope-review"
+    },
+    {
+      "operation": "employees.create-update-delete",
+      "status": "unverified",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/303ee235f23fa-get-employees",
+      "verified_on": "2026-09-21",
+      "notes": "Homepage creation claim conflicts with GET-only expanded endpoint group; do not invent employee CRUD.",
+      "evidence_level": "negative-scope-review"
+    },
+    {
+      "operation": "customers.merge-delete",
+      "status": "unverified",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/042bd3bf861ae-get-customers",
+      "verified_on": "2026-09-21",
+      "notes": "No merge/delete support established by this research.",
+      "evidence_level": "negative-scope-review"
+    },
+    {
+      "operation": "customers.addresses.update-delete",
+      "status": "unverified",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/042bd3bf861ae-get-customers",
+      "verified_on": "2026-09-21",
+      "notes": "Only address list/create/get established; arbitrary update/delete unverified.",
+      "evidence_level": "negative-scope-review"
+    },
+    {
+      "operation": "jobs.generic-update-finish-cancel",
+      "status": "unverified",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/6c97704da8bf3-get-jobs",
+      "verified_on": "2026-09-21",
+      "notes": "No generic PUT job or finish/cancel method established by this research; event names are not methods.",
+      "evidence_level": "negative-scope-review"
+    },
+    {
+      "operation": "appointments.standalone-crud",
+      "status": "unverified",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/6c97704da8bf3-get-jobs",
+      "verified_on": "2026-09-21",
+      "notes": "Category exists but standalone operation bodies not extracted.",
+      "evidence_level": "negative-scope-review"
+    },
+    {
+      "operation": "routes.optimize-create-gps",
+      "status": "unverified",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/8d0d12e41a38b-get-routes",
+      "verified_on": "2026-09-21",
+      "notes": "Read grouping does not establish route optimization, creation, or GPS API.",
+      "evidence_level": "negative-scope-review"
+    },
+    {
+      "operation": "events.create-update-delete",
+      "status": "unverified",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/5f8b2b787f4ba-get-events",
+      "verified_on": "2026-09-21",
+      "notes": "Only list and detail reads established.",
+      "evidence_level": "negative-scope-review"
+    },
+    {
+      "operation": "business-units.manage",
+      "status": "unverified",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/6c97704da8bf3-get-jobs",
+      "verified_on": "2026-09-21",
+      "notes": "Fields in records do not establish management methods.",
+      "evidence_level": "negative-scope-review"
+    },
+    {
+      "operation": "procurement.purchase-orders-stock-receiving",
+      "status": "unverified",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/p5zsg5n9sbiij-pricebook-api",
+      "verified_on": "2026-09-21",
+      "notes": "No public PO issuance, inventory stock or receiving API established.",
+      "evidence_level": "negative-scope-review"
+    },
+    {
+      "operation": "reports.exports-audit-log",
+      "status": "unverified",
+      "source_url": "https://docs.housecallpro.com/",
+      "verified_on": "2026-09-21",
+      "notes": "No general report/export/audit-log endpoint established; use paginated reads and labeled integration evidence.",
+      "evidence_level": "negative-scope-review"
+    },
+    {
+      "operation": "communications.native-send-history",
+      "status": "unverified",
+      "source_url": "https://docs.housecallpro.com/",
+      "verified_on": "2026-09-21",
+      "notes": "No universal native conversation-history/send contract established; separate delivery systems need their own authority.",
+      "evidence_level": "negative-scope-review"
+    },
+    {
+      "operation": "webhooks.delivery-history-replay",
+      "status": "unverified",
+      "source_url": "https://docs.housecallpro.com/docs/housecall-public-api/46e9e1be07621-webhooks",
+      "verified_on": "2026-09-21",
+      "notes": "No public provider delivery-history or replay endpoint, delivery SLA, or retry schedule established.",
+      "evidence_level": "negative-scope-review"
+    },
+    {
+      "operation": "partner-jobs.general-pro-access",
+      "status": "unverified",
+      "source_url": "https://docs.housecallpro.com/",
+      "verified_on": "2026-09-21",
+      "notes": "Separate eligible-partner onboarding; not ordinary Pro workflow/marketing/accounting entitlement.",
+      "evidence_level": "negative-scope-review"
+    },
+    {
+      "operation": "equipment.internal-property-workflow",
+      "status": "observed-internal",
+      "source_url": null,
+      "verified_on": "2026-09-21",
+      "notes": "Reusable local operational references record tenant-specific internal reads/writes/attach. Not an official public API contract or live revalidation. No private IDs/paths copied; requires a separately approved adapter.",
+      "evidence_level": "sanitized-local-reference"
+    },
+    {
+      "operation": "customers.internal-billing-parent",
+      "status": "observed-internal",
+      "source_url": null,
+      "verified_on": "2026-09-21",
+      "notes": "Local reference observations of billing parent/contractor fields; not public coverage; tags alone may undercount. Explicit internal adapter authority required.",
+      "evidence_level": "sanitized-local-reference"
+    },
+    {
+      "operation": "pricebook.internal-template-evidence",
+      "status": "observed-internal",
+      "source_url": null,
+      "verified_on": "2026-09-21",
+      "notes": "Local reference describes internal template traversal and BOM heuristics. No public provenance or supplier-order authority implied.",
+      "evidence_level": "sanitized-local-reference"
+    },
+    {
+      "operation": "webhooks.internal-disablement-forensics",
+      "status": "observed-internal",
+      "source_url": null,
+      "verified_on": "2026-09-21",
+      "notes": "Local reference observes status/config evidence but not actor, reason, disable timestamp or delivery history. Not a public endpoint guarantee.",
+      "evidence_level": "sanitized-local-reference"
+    },
+    {
+      "operation": "field-intelligence.replay-and-projection",
+      "status": "unverified",
+      "source_url": null,
+      "verified_on": "2026-09-21",
+      "notes": "Integration-specific derived evidence and replay, not HCP public API. No universal FI contract asserted; deployment adapter needs separate scope/authorization.",
+      "evidence_level": "integration-boundary"
+    }
+  ]
+}

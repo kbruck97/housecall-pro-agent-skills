@@ -1,0 +1,1119 @@
+{
+  "schema_version": 1,
+  "distribution_license": "MIT",
+  "license_disposition": "Explicit owner authorization releases included RivetFlo-owned material under MIT, including historically proprietary or undeclared sources. Source notices are historical attribution; excluded sources and third-party rights are not relicensed.",
+  "snapshot": "2026-09-21",
+  "expected_families": 38,
+  "expected_instances": 123,
+  "expected_package_variants": 61,
+  "privacy": "Anonymous tenant-family aliases and opaque local variant labels only; private path/hash mapping is outside the distribution. Notices were read from current source mains; equipment umbrella drift is disclosed in its source-decisions.",
+  "families": [
+    {
+      "family": "tenant-water-treatment-front-office-csr",
+      "disposition": "distilled",
+      "destinations": [
+        "hcp-csr-routing",
+        "hcp-lead-follow-up"
+      ],
+      "reason": "Reusable domain behavior retained; deployment bindings and case data excluded.",
+      "instances": 1,
+      "main_variants": 1,
+      "variants": [
+        {
+          "variant": "tenant-water-treatment-front-office-csr:v1",
+          "instances": 1,
+          "archived_instances": 0,
+          "decision": "distilled-not-copied",
+          "resolution": "Shared behavior consolidated; tenant identities and prices externalized; current scope/consent/readback gates supersede historical shortcuts. See destination source-decisions or workflow references. No case corpus or backup copied."
+        }
+      ],
+      "source_notices": [
+        {
+          "author": "Hermes Agent",
+          "license_label": "MIT"
+        }
+      ]
+    },
+    {
+      "family": "agent-memory-architecture",
+      "disposition": "excluded",
+      "destinations": [],
+      "reason": "Peripheral memory isolation architecture; not an HCP operation. Tenant-isolation rule retained in foundations, unrelated memory implementation excluded.",
+      "instances": 4,
+      "main_variants": 3,
+      "variants": [
+        {
+          "variant": "agent-memory-architecture:v1",
+          "instances": 2,
+          "archived_instances": 0,
+          "decision": "excluded-domain-or-historical",
+          "resolution": "Peripheral memory isolation architecture; not an HCP operation. Tenant-isolation rule retained in foundations, unrelated memory implementation excluded."
+        },
+        {
+          "variant": "agent-memory-architecture:v2",
+          "instances": 1,
+          "archived_instances": 0,
+          "decision": "excluded-domain-or-historical",
+          "resolution": "Peripheral memory isolation architecture; not an HCP operation. Tenant-isolation rule retained in foundations, unrelated memory implementation excluded."
+        },
+        {
+          "variant": "agent-memory-architecture:v3",
+          "instances": 1,
+          "archived_instances": 0,
+          "decision": "excluded-domain-or-historical",
+          "resolution": "Peripheral memory isolation architecture; not an HCP operation. Tenant-isolation rule retained in foundations, unrelated memory implementation excluded."
+        }
+      ],
+      "source_notices": [
+        {
+          "author": "Riv",
+          "license_label": "MIT"
+        }
+      ]
+    },
+    {
+      "family": "agent-usage-accounting",
+      "disposition": "excluded",
+      "destinations": [],
+      "reason": "Peripheral agent usage accounting, not HCP domain functionality.",
+      "instances": 1,
+      "main_variants": 1,
+      "variants": [
+        {
+          "variant": "agent-usage-accounting:v1",
+          "instances": 1,
+          "archived_instances": 0,
+          "decision": "excluded-domain-or-historical",
+          "resolution": "Peripheral agent usage accounting, not HCP domain functionality."
+        }
+      ],
+      "source_notices": [
+        {
+          "author": "Riv",
+          "license_label": "MIT"
+        }
+      ]
+    },
+    {
+      "family": "client-automation-delivery",
+      "disposition": "distilled",
+      "destinations": [
+        "hcp-foundations",
+        "hcp-webhook-recovery",
+        "hcp-pricebook-procurement"
+      ],
+      "reason": "Reusable domain behavior retained; deployment bindings and case data excluded.",
+      "instances": 7,
+      "main_variants": 5,
+      "variants": [
+        {
+          "variant": "client-automation-delivery:v1",
+          "instances": 1,
+          "archived_instances": 1,
+          "decision": "distilled-not-copied",
+          "resolution": "Shared behavior consolidated; tenant identities and prices externalized; current scope/consent/readback gates supersede historical shortcuts. See destination source-decisions or workflow references. No case corpus or backup copied."
+        },
+        {
+          "variant": "client-automation-delivery:v2",
+          "instances": 1,
+          "archived_instances": 0,
+          "decision": "distilled-not-copied",
+          "resolution": "Shared behavior consolidated; tenant identities and prices externalized; current scope/consent/readback gates supersede historical shortcuts. See destination source-decisions or workflow references. No case corpus or backup copied."
+        },
+        {
+          "variant": "client-automation-delivery:v3",
+          "instances": 1,
+          "archived_instances": 0,
+          "decision": "distilled-not-copied",
+          "resolution": "Shared behavior consolidated; tenant identities and prices externalized; current scope/consent/readback gates supersede historical shortcuts. See destination source-decisions or workflow references. No case corpus or backup copied."
+        },
+        {
+          "variant": "client-automation-delivery:v4",
+          "instances": 3,
+          "archived_instances": 0,
+          "decision": "distilled-not-copied",
+          "resolution": "Shared behavior consolidated; tenant identities and prices externalized; current scope/consent/readback gates supersede historical shortcuts. See destination source-decisions or workflow references. No case corpus or backup copied."
+        },
+        {
+          "variant": "client-automation-delivery:v5",
+          "instances": 1,
+          "archived_instances": 0,
+          "decision": "distilled-not-copied",
+          "resolution": "Shared behavior consolidated; tenant identities and prices externalized; current scope/consent/readback gates supersede historical shortcuts. See destination source-decisions or workflow references. No case corpus or backup copied."
+        }
+      ],
+      "source_notices": [
+        {
+          "author": "Hermes Agent",
+          "license_label": "MIT"
+        }
+      ]
+    },
+    {
+      "family": "client-automation-program-boards",
+      "disposition": "distilled",
+      "destinations": [
+        "hcp-webhook-recovery"
+      ],
+      "reason": "Reusable domain behavior retained; deployment bindings and case data excluded.",
+      "instances": 1,
+      "main_variants": 1,
+      "variants": [
+        {
+          "variant": "client-automation-program-boards:v1",
+          "instances": 1,
+          "archived_instances": 0,
+          "decision": "distilled-not-copied",
+          "resolution": "Shared behavior consolidated; tenant identities and prices externalized; current scope/consent/readback gates supersede historical shortcuts. See destination source-decisions or workflow references. No case corpus or backup copied."
+        }
+      ],
+      "source_notices": [
+        {
+          "author": "Riv",
+          "license_label": "MIT"
+        }
+      ]
+    },
+    {
+      "family": "customer-message-ledger-audits",
+      "disposition": "distilled",
+      "destinations": [
+        "hcp-customer-service",
+        "hcp-followup-scanner"
+      ],
+      "reason": "Reusable domain behavior retained; deployment bindings and case data excluded.",
+      "instances": 1,
+      "main_variants": 1,
+      "variants": [
+        {
+          "variant": "customer-message-ledger-audits:v1",
+          "instances": 1,
+          "archived_instances": 0,
+          "decision": "distilled-not-copied",
+          "resolution": "Shared behavior consolidated; tenant identities and prices externalized; current scope/consent/readback gates supersede historical shortcuts. See destination source-decisions or workflow references. No case corpus or backup copied."
+        }
+      ],
+      "source_notices": [
+        {
+          "author": "Hermes Agent",
+          "license_label": "MIT"
+        }
+      ]
+    },
+    {
+      "family": "tenant-hvac-front-office-csr",
+      "disposition": "distilled",
+      "destinations": [
+        "hcp-csr-routing",
+        "hcp-scheduling"
+      ],
+      "reason": "Reusable domain behavior retained; deployment bindings and case data excluded.",
+      "instances": 3,
+      "main_variants": 2,
+      "variants": [
+        {
+          "variant": "tenant-hvac-front-office-csr:v1",
+          "instances": 2,
+          "archived_instances": 0,
+          "decision": "distilled-not-copied",
+          "resolution": "Shared behavior consolidated; tenant identities and prices externalized; current scope/consent/readback gates supersede historical shortcuts. See destination source-decisions or workflow references. No case corpus or backup copied."
+        },
+        {
+          "variant": "tenant-hvac-front-office-csr:v2",
+          "instances": 1,
+          "archived_instances": 0,
+          "decision": "distilled-not-copied",
+          "resolution": "Shared behavior consolidated; tenant identities and prices externalized; current scope/consent/readback gates supersede historical shortcuts. See destination source-decisions or workflow references. No case corpus or backup copied."
+        }
+      ],
+      "source_notices": [
+        {
+          "author": "Hermes Agent",
+          "license_label": "MIT"
+        }
+      ]
+    },
+    {
+      "family": "dns-migration",
+      "disposition": "excluded",
+      "destinations": [],
+      "reason": "Domain-irrelevant DNS/agency pricing mention; excluded.",
+      "instances": 1,
+      "main_variants": 1,
+      "variants": [
+        {
+          "variant": "dns-migration:v1",
+          "instances": 1,
+          "archived_instances": 0,
+          "decision": "excluded-domain-or-historical",
+          "resolution": "Domain-irrelevant DNS/agency pricing mention; excluded."
+        }
+      ],
+      "source_notices": [
+        {
+          "author": "not declared",
+          "license_label": "not declared"
+        }
+      ]
+    },
+    {
+      "family": "growthops-full-stack-marketing",
+      "disposition": "distilled",
+      "destinations": [
+        "hcp-completed-job-content"
+      ],
+      "reason": "Reusable domain behavior retained; deployment bindings and case data excluded.",
+      "instances": 1,
+      "main_variants": 1,
+      "variants": [
+        {
+          "variant": "growthops-full-stack-marketing:v1",
+          "instances": 1,
+          "archived_instances": 0,
+          "decision": "distilled-not-copied",
+          "resolution": "Shared behavior consolidated; tenant identities and prices externalized; current scope/consent/readback gates supersede historical shortcuts. See destination source-decisions or workflow references. No case corpus or backup copied."
+        }
+      ],
+      "source_notices": [
+        {
+          "author": "Riv",
+          "license_label": "MIT"
+        }
+      ]
+    },
+    {
+      "family": "happy-call-process",
+      "disposition": "distilled",
+      "destinations": [
+        "hcp-happy-calls"
+      ],
+      "reason": "Reusable domain behavior retained; deployment bindings and case data excluded.",
+      "instances": 8,
+      "main_variants": 4,
+      "variants": [
+        {
+          "variant": "happy-call-process:v1",
+          "instances": 1,
+          "archived_instances": 0,
+          "decision": "distilled-not-copied",
+          "resolution": "Shared behavior consolidated; tenant identities and prices externalized; current scope/consent/readback gates supersede historical shortcuts. See destination source-decisions or workflow references. No case corpus or backup copied."
+        },
+        {
+          "variant": "happy-call-process:v2",
+          "instances": 2,
+          "archived_instances": 0,
+          "decision": "distilled-not-copied",
+          "resolution": "Shared behavior consolidated; tenant identities and prices externalized; current scope/consent/readback gates supersede historical shortcuts. See destination source-decisions or workflow references. No case corpus or backup copied."
+        },
+        {
+          "variant": "happy-call-process:v3",
+          "instances": 1,
+          "archived_instances": 0,
+          "decision": "distilled-not-copied",
+          "resolution": "Shared behavior consolidated; tenant identities and prices externalized; current scope/consent/readback gates supersede historical shortcuts. See destination source-decisions or workflow references. No case corpus or backup copied."
+        },
+        {
+          "variant": "happy-call-process:v4",
+          "instances": 2,
+          "archived_instances": 0,
+          "decision": "distilled-not-copied",
+          "resolution": "Shared behavior consolidated; tenant identities and prices externalized; current scope/consent/readback gates supersede historical shortcuts. See destination source-decisions or workflow references. No case corpus or backup copied."
+        },
+        {
+          "variant": "happy-call-process:v5",
+          "instances": 1,
+          "archived_instances": 0,
+          "decision": "distilled-not-copied",
+          "resolution": "Shared behavior consolidated; tenant identities and prices externalized; current scope/consent/readback gates supersede historical shortcuts. See destination source-decisions or workflow references. No case corpus or backup copied."
+        },
+        {
+          "variant": "happy-call-process:v6",
+          "instances": 1,
+          "archived_instances": 0,
+          "decision": "distilled-not-copied",
+          "resolution": "Shared behavior consolidated; tenant identities and prices externalized; current scope/consent/readback gates supersede historical shortcuts. See destination source-decisions or workflow references. No case corpus or backup copied."
+        }
+      ],
+      "source_notices": [
+        {
+          "author": "not declared",
+          "license_label": "not declared"
+        }
+      ]
+    },
+    {
+      "family": "hcp-alpha-data-collection",
+      "disposition": "distilled",
+      "destinations": [
+        "hcp-alpha-data-collection"
+      ],
+      "reason": "Reusable domain behavior retained; deployment bindings and case data excluded.",
+      "instances": 1,
+      "main_variants": 1,
+      "variants": [
+        {
+          "variant": "hcp-alpha-data-collection:v1",
+          "instances": 1,
+          "archived_instances": 0,
+          "decision": "distilled-not-copied",
+          "resolution": "Shared behavior consolidated; tenant identities and prices externalized; current scope/consent/readback gates supersede historical shortcuts. See destination source-decisions or workflow references. No case corpus or backup copied."
+        }
+      ],
+      "source_notices": [
+        {
+          "author": "Hermes Agent",
+          "license_label": "MIT"
+        }
+      ]
+    },
+    {
+      "family": "hcp-equipment-evidence-adjudication",
+      "disposition": "distilled",
+      "destinations": [
+        "hcp-equipment-evidence-adjudication"
+      ],
+      "reason": "Reusable domain behavior retained; deployment bindings and case data excluded.",
+      "instances": 1,
+      "main_variants": 1,
+      "variants": [
+        {
+          "variant": "hcp-equipment-evidence-adjudication:v1",
+          "instances": 1,
+          "archived_instances": 0,
+          "decision": "distilled-not-copied",
+          "resolution": "Shared behavior consolidated; tenant identities and prices externalized; current scope/consent/readback gates supersede historical shortcuts. See destination source-decisions or workflow references. No case corpus or backup copied."
+        }
+      ],
+      "source_notices": [
+        {
+          "author": "not declared",
+          "license_label": "not declared"
+        }
+      ]
+    },
+    {
+      "family": "hcp-equipment-nameplate-extraction",
+      "disposition": "distilled",
+      "destinations": [
+        "hcp-equipment-nameplate-extraction"
+      ],
+      "reason": "Reusable domain behavior retained; deployment bindings and case data excluded.",
+      "instances": 1,
+      "main_variants": 1,
+      "variants": [
+        {
+          "variant": "hcp-equipment-nameplate-extraction:v1",
+          "instances": 1,
+          "archived_instances": 0,
+          "decision": "distilled-not-copied",
+          "resolution": "Shared behavior consolidated; tenant identities and prices externalized; current scope/consent/readback gates supersede historical shortcuts. See destination source-decisions or workflow references. No case corpus or backup copied."
+        }
+      ],
+      "source_notices": [
+        {
+          "author": "Hermes Agent",
+          "license_label": "MIT"
+        }
+      ]
+    },
+    {
+      "family": "hcp-equipment-profile-reconciliation",
+      "disposition": "distilled",
+      "destinations": [
+        "hcp-equipment-profile-reconciliation"
+      ],
+      "reason": "Reusable domain behavior retained; deployment bindings and case data excluded.",
+      "instances": 1,
+      "main_variants": 1,
+      "variants": [
+        {
+          "variant": "hcp-equipment-profile-reconciliation:v1",
+          "instances": 1,
+          "archived_instances": 0,
+          "decision": "distilled-not-copied",
+          "resolution": "Shared behavior consolidated; tenant identities and prices externalized; current scope/consent/readback gates supersede historical shortcuts. See destination source-decisions or workflow references. No case corpus or backup copied."
+        }
+      ],
+      "source_notices": [
+        {
+          "author": "not declared",
+          "license_label": "not declared"
+        }
+      ]
+    },
+    {
+      "family": "hcp-trade-equipment",
+      "disposition": "distilled",
+      "destinations": [
+        "hcp-trade-equipment"
+      ],
+      "reason": "Reusable domain behavior retained; deployment bindings and case data excluded.",
+      "instances": 1,
+      "main_variants": 1,
+      "variants": [
+        {
+          "variant": "hcp-trade-equipment:v1",
+          "instances": 1,
+          "archived_instances": 0,
+          "decision": "distilled-not-copied",
+          "resolution": "Shared behavior consolidated; tenant identities and prices externalized; current scope/consent/readback gates supersede historical shortcuts. See destination source-decisions or workflow references. No case corpus or backup copied."
+        }
+      ],
+      "source_notices": [
+        {
+          "author": "Keaton + Hermes Agent",
+          "license_label": "MIT"
+        }
+      ]
+    },
+    {
+      "family": "hcp-trade-equipment-job-review",
+      "disposition": "distilled",
+      "destinations": [
+        "hcp-trade-equipment-job-review"
+      ],
+      "reason": "Reusable domain behavior retained; deployment bindings and case data excluded.",
+      "instances": 1,
+      "main_variants": 1,
+      "variants": [
+        {
+          "variant": "hcp-trade-equipment-job-review:v1",
+          "instances": 1,
+          "archived_instances": 0,
+          "decision": "distilled-not-copied",
+          "resolution": "Shared behavior consolidated; tenant identities and prices externalized; current scope/consent/readback gates supersede historical shortcuts. See destination source-decisions or workflow references. No case corpus or backup copied."
+        }
+      ],
+      "source_notices": [
+        {
+          "author": "Riv",
+          "license_label": "MIT"
+        }
+      ]
+    },
+    {
+      "family": "hermes-ops",
+      "disposition": "excluded",
+      "destinations": [],
+      "reason": "Archived gateway operations, not an HCP capability; no obsolete commands copied.",
+      "instances": 8,
+      "main_variants": 2,
+      "variants": [
+        {
+          "variant": "hermes-ops:v1",
+          "instances": 4,
+          "archived_instances": 4,
+          "decision": "excluded-domain-or-historical",
+          "resolution": "Archived gateway operations, not an HCP capability; no obsolete commands copied."
+        },
+        {
+          "variant": "hermes-ops:v2",
+          "instances": 4,
+          "archived_instances": 4,
+          "decision": "excluded-domain-or-historical",
+          "resolution": "Archived gateway operations, not an HCP capability; no obsolete commands copied."
+        }
+      ],
+      "source_notices": [
+        {
+          "author": "Tony (Hermes)",
+          "license_label": "MIT"
+        }
+      ]
+    },
+    {
+      "family": "hvac-equipment-reference-lookup",
+      "disposition": "distilled",
+      "destinations": [
+        "hvac-equipment-reference-lookup"
+      ],
+      "reason": "Reusable domain behavior retained; deployment bindings and case data excluded.",
+      "instances": 1,
+      "main_variants": 1,
+      "variants": [
+        {
+          "variant": "hvac-equipment-reference-lookup:v1",
+          "instances": 1,
+          "archived_instances": 0,
+          "decision": "distilled-not-copied",
+          "resolution": "Shared behavior consolidated; tenant identities and prices externalized; current scope/consent/readback gates supersede historical shortcuts. See destination source-decisions or workflow references. No case corpus or backup copied."
+        }
+      ],
+      "source_notices": [
+        {
+          "author": "not declared",
+          "license_label": "not declared"
+        }
+      ]
+    },
+    {
+      "family": "local-service-job-posts",
+      "disposition": "distilled",
+      "destinations": [
+        "hcp-completed-job-content"
+      ],
+      "reason": "Reusable domain behavior retained; deployment bindings and case data excluded.",
+      "instances": 1,
+      "main_variants": 1,
+      "variants": [
+        {
+          "variant": "local-service-job-posts:v1",
+          "instances": 1,
+          "archived_instances": 0,
+          "decision": "distilled-not-copied",
+          "resolution": "Shared behavior consolidated; tenant identities and prices externalized; current scope/consent/readback gates supersede historical shortcuts. See destination source-decisions or workflow references. No case corpus or backup copied."
+        }
+      ],
+      "source_notices": [
+        {
+          "author": "not declared",
+          "license_label": "not declared"
+        }
+      ]
+    },
+    {
+      "family": "tenant-electrical-front-office-csr",
+      "disposition": "distilled",
+      "destinations": [
+        "hcp-csr-routing"
+      ],
+      "reason": "Reusable domain behavior retained; deployment bindings and case data excluded.",
+      "instances": 1,
+      "main_variants": 1,
+      "variants": [
+        {
+          "variant": "tenant-electrical-front-office-csr:v1",
+          "instances": 1,
+          "archived_instances": 0,
+          "decision": "distilled-not-copied",
+          "resolution": "Shared behavior consolidated; tenant identities and prices externalized; current scope/consent/readback gates supersede historical shortcuts. See destination source-decisions or workflow references. No case corpus or backup copied."
+        }
+      ],
+      "source_notices": [
+        {
+          "author": "RivetFlo",
+          "license_label": "Proprietary"
+        }
+      ]
+    },
+    {
+      "family": "productizing-client-automation-templates",
+      "disposition": "excluded",
+      "destinations": [],
+      "reason": "Archived deployment templates; current adapter/safety boundaries replace historical host-specific instructions.",
+      "instances": 6,
+      "main_variants": 1,
+      "variants": [
+        {
+          "variant": "productizing-client-automation-templates:v1",
+          "instances": 6,
+          "archived_instances": 6,
+          "decision": "excluded-domain-or-historical",
+          "resolution": "Archived deployment templates; current adapter/safety boundaries replace historical host-specific instructions."
+        }
+      ],
+      "source_notices": [
+        {
+          "author": "not declared",
+          "license_label": "not declared"
+        }
+      ]
+    },
+    {
+      "family": "public-review-dispute-operations",
+      "disposition": "distilled",
+      "destinations": [
+        "hcp-customer-service",
+        "hcp-completed-job-content"
+      ],
+      "reason": "Reusable domain behavior retained; deployment bindings and case data excluded.",
+      "instances": 1,
+      "main_variants": 1,
+      "variants": [
+        {
+          "variant": "public-review-dispute-operations:v1",
+          "instances": 1,
+          "archived_instances": 0,
+          "decision": "distilled-not-copied",
+          "resolution": "Shared behavior consolidated; tenant identities and prices externalized; current scope/consent/readback gates supersede historical shortcuts. See destination source-decisions or workflow references. No case corpus or backup copied."
+        }
+      ],
+      "source_notices": [
+        {
+          "author": "Hermes Curator",
+          "license_label": "MIT"
+        }
+      ]
+    },
+    {
+      "family": "remote-automation-vps-ops",
+      "disposition": "excluded",
+      "destinations": [],
+      "reason": "Archived VPS/gateway deployment; current webhook and adapter boundaries replace host-specific setup.",
+      "instances": 8,
+      "main_variants": 2,
+      "variants": [
+        {
+          "variant": "remote-automation-vps-ops:v1",
+          "instances": 6,
+          "archived_instances": 6,
+          "decision": "excluded-domain-or-historical",
+          "resolution": "Archived VPS/gateway deployment; current webhook and adapter boundaries replace host-specific setup."
+        },
+        {
+          "variant": "remote-automation-vps-ops:v2",
+          "instances": 2,
+          "archived_instances": 2,
+          "decision": "excluded-domain-or-historical",
+          "resolution": "Archived VPS/gateway deployment; current webhook and adapter boundaries replace host-specific setup."
+        }
+      ],
+      "source_notices": [
+        {
+          "author": "Hermes Agent",
+          "license_label": "MIT"
+        }
+      ]
+    },
+    {
+      "family": "tenant-plumbing-front-office-csr",
+      "disposition": "distilled",
+      "destinations": [
+        "hcp-csr-routing"
+      ],
+      "reason": "Reusable domain behavior retained; deployment bindings and case data excluded.",
+      "instances": 1,
+      "main_variants": 1,
+      "variants": [
+        {
+          "variant": "tenant-plumbing-front-office-csr:v1",
+          "instances": 1,
+          "archived_instances": 0,
+          "decision": "distilled-not-copied",
+          "resolution": "Shared behavior consolidated; tenant identities and prices externalized; current scope/consent/readback gates supersede historical shortcuts. See destination source-decisions or workflow references. No case corpus or backup copied."
+        }
+      ],
+      "source_notices": [
+        {
+          "author": "RivetFlo",
+          "license_label": "Proprietary"
+        }
+      ]
+    },
+    {
+      "family": "rivetflo-agent-auth-otp",
+      "disposition": "distilled",
+      "destinations": [
+        "hcp-foundations"
+      ],
+      "reason": "Reusable domain behavior retained; deployment bindings and case data excluded.",
+      "instances": 9,
+      "main_variants": 1,
+      "variants": [
+        {
+          "variant": "rivetflo-agent-auth-otp:v1",
+          "instances": 9,
+          "archived_instances": 0,
+          "decision": "distilled-not-copied",
+          "resolution": "Shared behavior consolidated; tenant identities and prices externalized; current scope/consent/readback gates supersede historical shortcuts. See destination source-decisions or workflow references. No case corpus or backup copied."
+        }
+      ],
+      "source_notices": [
+        {
+          "author": "Riv",
+          "license_label": "Proprietary"
+        }
+      ]
+    },
+    {
+      "family": "rivetflo-backend-marketing-engine",
+      "disposition": "distilled",
+      "destinations": [
+        "hcp-completed-job-content"
+      ],
+      "reason": "Reusable domain behavior retained; deployment bindings and case data excluded.",
+      "instances": 3,
+      "main_variants": 3,
+      "variants": [
+        {
+          "variant": "rivetflo-backend-marketing-engine:v1",
+          "instances": 1,
+          "archived_instances": 0,
+          "decision": "distilled-not-copied",
+          "resolution": "Shared behavior consolidated; tenant identities and prices externalized; current scope/consent/readback gates supersede historical shortcuts. See destination source-decisions or workflow references. No case corpus or backup copied."
+        },
+        {
+          "variant": "rivetflo-backend-marketing-engine:v2",
+          "instances": 1,
+          "archived_instances": 0,
+          "decision": "distilled-not-copied",
+          "resolution": "Shared behavior consolidated; tenant identities and prices externalized; current scope/consent/readback gates supersede historical shortcuts. See destination source-decisions or workflow references. No case corpus or backup copied."
+        },
+        {
+          "variant": "rivetflo-backend-marketing-engine:v3",
+          "instances": 1,
+          "archived_instances": 0,
+          "decision": "distilled-not-copied",
+          "resolution": "Shared behavior consolidated; tenant identities and prices externalized; current scope/consent/readback gates supersede historical shortcuts. See destination source-decisions or workflow references. No case corpus or backup copied."
+        }
+      ],
+      "source_notices": [
+        {
+          "author": "Hermes Agent",
+          "license_label": "not declared"
+        }
+      ]
+    },
+    {
+      "family": "rivetflo-csr-agent",
+      "disposition": "distilled",
+      "destinations": [
+        "hcp-csr-routing"
+      ],
+      "reason": "Reusable domain behavior retained; deployment bindings and case data excluded.",
+      "instances": 7,
+      "main_variants": 3,
+      "variants": [
+        {
+          "variant": "rivetflo-csr-agent:v1",
+          "instances": 3,
+          "archived_instances": 0,
+          "decision": "distilled-not-copied",
+          "resolution": "Shared behavior consolidated; tenant identities and prices externalized; current scope/consent/readback gates supersede historical shortcuts. See destination source-decisions or workflow references. No case corpus or backup copied."
+        },
+        {
+          "variant": "rivetflo-csr-agent:v2",
+          "instances": 3,
+          "archived_instances": 0,
+          "decision": "distilled-not-copied",
+          "resolution": "Shared behavior consolidated; tenant identities and prices externalized; current scope/consent/readback gates supersede historical shortcuts. See destination source-decisions or workflow references. No case corpus or backup copied."
+        },
+        {
+          "variant": "rivetflo-csr-agent:v3",
+          "instances": 1,
+          "archived_instances": 0,
+          "decision": "distilled-not-copied",
+          "resolution": "Shared behavior consolidated; tenant identities and prices externalized; current scope/consent/readback gates supersede historical shortcuts. See destination source-decisions or workflow references. No case corpus or backup copied."
+        }
+      ],
+      "source_notices": [
+        {
+          "author": "Hermes Agent",
+          "license_label": "MIT"
+        }
+      ]
+    },
+    {
+      "family": "rivetflo-csr-customer-service",
+      "disposition": "distilled",
+      "destinations": [
+        "hcp-customer-service"
+      ],
+      "reason": "Reusable domain behavior retained; deployment bindings and case data excluded.",
+      "instances": 7,
+      "main_variants": 3,
+      "variants": [
+        {
+          "variant": "rivetflo-csr-customer-service:v1",
+          "instances": 3,
+          "archived_instances": 0,
+          "decision": "distilled-not-copied",
+          "resolution": "Shared behavior consolidated; tenant identities and prices externalized; current scope/consent/readback gates supersede historical shortcuts. See destination source-decisions or workflow references. No case corpus or backup copied."
+        },
+        {
+          "variant": "rivetflo-csr-customer-service:v2",
+          "instances": 3,
+          "archived_instances": 0,
+          "decision": "distilled-not-copied",
+          "resolution": "Shared behavior consolidated; tenant identities and prices externalized; current scope/consent/readback gates supersede historical shortcuts. See destination source-decisions or workflow references. No case corpus or backup copied."
+        },
+        {
+          "variant": "rivetflo-csr-customer-service:v3",
+          "instances": 1,
+          "archived_instances": 0,
+          "decision": "distilled-not-copied",
+          "resolution": "Shared behavior consolidated; tenant identities and prices externalized; current scope/consent/readback gates supersede historical shortcuts. See destination source-decisions or workflow references. No case corpus or backup copied."
+        }
+      ],
+      "source_notices": [
+        {
+          "author": "Hermes Agent",
+          "license_label": "MIT"
+        }
+      ]
+    },
+    {
+      "family": "rivetflo-csr-estimate-follow-up",
+      "disposition": "distilled",
+      "destinations": [
+        "hcp-estimate-follow-up"
+      ],
+      "reason": "Reusable domain behavior retained; deployment bindings and case data excluded.",
+      "instances": 7,
+      "main_variants": 1,
+      "variants": [
+        {
+          "variant": "rivetflo-csr-estimate-follow-up:v1",
+          "instances": 7,
+          "archived_instances": 0,
+          "decision": "distilled-not-copied",
+          "resolution": "Shared behavior consolidated; tenant identities and prices externalized; current scope/consent/readback gates supersede historical shortcuts. See destination source-decisions or workflow references. No case corpus or backup copied."
+        }
+      ],
+      "source_notices": [
+        {
+          "author": "Hermes Agent",
+          "license_label": "MIT"
+        }
+      ]
+    },
+    {
+      "family": "rivetflo-csr-invoice-follow-up",
+      "disposition": "distilled",
+      "destinations": [
+        "hcp-invoice-follow-up"
+      ],
+      "reason": "Reusable domain behavior retained; deployment bindings and case data excluded.",
+      "instances": 7,
+      "main_variants": 1,
+      "variants": [
+        {
+          "variant": "rivetflo-csr-invoice-follow-up:v1",
+          "instances": 7,
+          "archived_instances": 0,
+          "decision": "distilled-not-copied",
+          "resolution": "Shared behavior consolidated; tenant identities and prices externalized; current scope/consent/readback gates supersede historical shortcuts. See destination source-decisions or workflow references. No case corpus or backup copied."
+        }
+      ],
+      "source_notices": [
+        {
+          "author": "Hermes Agent",
+          "license_label": "MIT"
+        }
+      ]
+    },
+    {
+      "family": "rivetflo-csr-lead-handling",
+      "disposition": "distilled",
+      "destinations": [
+        "hcp-lead-follow-up"
+      ],
+      "reason": "Reusable domain behavior retained; deployment bindings and case data excluded.",
+      "instances": 7,
+      "main_variants": 2,
+      "variants": [
+        {
+          "variant": "rivetflo-csr-lead-handling:v1",
+          "instances": 4,
+          "archived_instances": 0,
+          "decision": "distilled-not-copied",
+          "resolution": "Shared behavior consolidated; tenant identities and prices externalized; current scope/consent/readback gates supersede historical shortcuts. See destination source-decisions or workflow references. No case corpus or backup copied."
+        },
+        {
+          "variant": "rivetflo-csr-lead-handling:v2",
+          "instances": 3,
+          "archived_instances": 0,
+          "decision": "distilled-not-copied",
+          "resolution": "Shared behavior consolidated; tenant identities and prices externalized; current scope/consent/readback gates supersede historical shortcuts. See destination source-decisions or workflow references. No case corpus or backup copied."
+        }
+      ],
+      "source_notices": [
+        {
+          "author": "Hermes Agent",
+          "license_label": "MIT"
+        }
+      ]
+    },
+    {
+      "family": "rivetflo-followup-item-scanner",
+      "disposition": "distilled",
+      "destinations": [
+        "hcp-followup-scanner"
+      ],
+      "reason": "Reusable domain behavior retained; deployment bindings and case data excluded.",
+      "instances": 7,
+      "main_variants": 3,
+      "variants": [
+        {
+          "variant": "rivetflo-followup-item-scanner:v1",
+          "instances": 1,
+          "archived_instances": 0,
+          "decision": "distilled-not-copied",
+          "resolution": "Shared behavior consolidated; tenant identities and prices externalized; current scope/consent/readback gates supersede historical shortcuts. See destination source-decisions or workflow references. No case corpus or backup copied."
+        },
+        {
+          "variant": "rivetflo-followup-item-scanner:v2",
+          "instances": 3,
+          "archived_instances": 0,
+          "decision": "distilled-not-copied",
+          "resolution": "Shared behavior consolidated; tenant identities and prices externalized; current scope/consent/readback gates supersede historical shortcuts. See destination source-decisions or workflow references. No case corpus or backup copied."
+        },
+        {
+          "variant": "rivetflo-followup-item-scanner:v3",
+          "instances": 3,
+          "archived_instances": 0,
+          "decision": "distilled-not-copied",
+          "resolution": "Shared behavior consolidated; tenant identities and prices externalized; current scope/consent/readback gates supersede historical shortcuts. See destination source-decisions or workflow references. No case corpus or backup copied."
+        }
+      ],
+      "source_notices": [
+        {
+          "author": "Hermes Agent",
+          "license_label": "MIT"
+        }
+      ]
+    },
+    {
+      "family": "rivetflo-production-operations",
+      "disposition": "distilled",
+      "destinations": [
+        "hcp-webhook-recovery"
+      ],
+      "reason": "Reusable domain behavior retained; deployment bindings and case data excluded.",
+      "instances": 1,
+      "main_variants": 1,
+      "variants": [
+        {
+          "variant": "rivetflo-production-operations:v1",
+          "instances": 1,
+          "archived_instances": 0,
+          "decision": "distilled-not-copied",
+          "resolution": "Shared behavior consolidated; tenant identities and prices externalized; current scope/consent/readback gates supersede historical shortcuts. See destination source-decisions or workflow references. No case corpus or backup copied."
+        }
+      ],
+      "source_notices": [
+        {
+          "author": "Hermes Agent",
+          "license_label": "MIT"
+        }
+      ]
+    },
+    {
+      "family": "rivetflo-release-deployment",
+      "disposition": "distilled",
+      "destinations": [
+        "hcp-webhook-recovery"
+      ],
+      "reason": "Reusable domain behavior retained; deployment bindings and case data excluded.",
+      "instances": 1,
+      "main_variants": 1,
+      "variants": [
+        {
+          "variant": "rivetflo-release-deployment:v1",
+          "instances": 1,
+          "archived_instances": 0,
+          "decision": "distilled-not-copied",
+          "resolution": "Shared behavior consolidated; tenant identities and prices externalized; current scope/consent/readback gates supersede historical shortcuts. See destination source-decisions or workflow references. No case corpus or backup copied."
+        }
+      ],
+      "source_notices": [
+        {
+          "author": "not declared",
+          "license_label": "not declared"
+        }
+      ]
+    },
+    {
+      "family": "scheduling-coordinator",
+      "disposition": "distilled",
+      "destinations": [
+        "hcp-scheduling"
+      ],
+      "reason": "Reusable domain behavior retained; deployment bindings and case data excluded.",
+      "instances": 3,
+      "main_variants": 1,
+      "variants": [
+        {
+          "variant": "scheduling-coordinator:v1",
+          "instances": 3,
+          "archived_instances": 0,
+          "decision": "distilled-not-copied",
+          "resolution": "Shared behavior consolidated; tenant identities and prices externalized; current scope/consent/readback gates supersede historical shortcuts. See destination source-decisions or workflow references. No case corpus or backup copied."
+        }
+      ],
+      "source_notices": [
+        {
+          "author": "not declared",
+          "license_label": "not declared"
+        }
+      ]
+    },
+    {
+      "family": "social-media-operations",
+      "disposition": "distilled",
+      "destinations": [
+        "hcp-completed-job-content"
+      ],
+      "reason": "Reusable domain behavior retained; deployment bindings and case data excluded.",
+      "instances": 1,
+      "main_variants": 1,
+      "variants": [
+        {
+          "variant": "social-media-operations:v1",
+          "instances": 1,
+          "archived_instances": 0,
+          "decision": "distilled-not-copied",
+          "resolution": "Shared behavior consolidated; tenant identities and prices externalized; current scope/consent/readback gates supersede historical shortcuts. See destination source-decisions or workflow references. No case corpus or backup copied."
+        }
+      ],
+      "source_notices": [
+        {
+          "author": "Hermes Agent",
+          "license_label": "not declared"
+        }
+      ]
+    },
+    {
+      "family": "software-engineering-workflows",
+      "disposition": "distilled",
+      "destinations": [
+        "hcp-completed-job-content",
+        "hcp-csr-routing"
+      ],
+      "reason": "Reusable domain behavior retained; deployment bindings and case data excluded.",
+      "instances": 1,
+      "main_variants": 1,
+      "variants": [
+        {
+          "variant": "software-engineering-workflows:v1",
+          "instances": 1,
+          "archived_instances": 0,
+          "decision": "distilled-not-copied",
+          "resolution": "Shared behavior consolidated; tenant identities and prices externalized; current scope/consent/readback gates supersede historical shortcuts. See destination source-decisions or workflow references. No case corpus or backup copied."
+        }
+      ],
+      "source_notices": [
+        {
+          "author": "Hermes Agent",
+          "license_label": "MIT"
+        }
+      ]
+    },
+    {
+      "family": "twilio-messaging-diagnostics",
+      "disposition": "distilled",
+      "destinations": [
+        "hcp-webhook-recovery",
+        "hcp-customer-service"
+      ],
+      "reason": "Reusable domain behavior retained; deployment bindings and case data excluded.",
+      "instances": 1,
+      "main_variants": 1,
+      "variants": [
+        {
+          "variant": "twilio-messaging-diagnostics:v1",
+          "instances": 1,
+          "archived_instances": 0,
+          "decision": "distilled-not-copied",
+          "resolution": "Shared behavior consolidated; tenant identities and prices externalized; current scope/consent/readback gates supersede historical shortcuts. See destination source-decisions or workflow references. No case corpus or backup copied."
+        }
+      ],
+      "source_notices": [
+        {
+          "author": "Hermes Agent",
+          "license_label": "MIT"
+        }
+      ]
+    }
+  ]
+}

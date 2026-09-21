@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0",
+  "validation_kind": "offline_editorial_package",
+  "status": "passed",
+  "skill": "hcp-trade-equipment-job-review",
+  "markdown_files_checked": 6,
+  "relative_intra_package_links_checked": 8,
+  "json_examples_parsed": 1,
+  "frontmatter_valid": true,
+  "privacy_pattern_categories": [
+    "absolute_local_path",
+    "network_url",
+    "email",
+    "provider_record",
+    "signed_query",
+    "private_origin",
+    "source_names"
+  ],
+  "privacy_pattern_matches": 0,
+  "manual_privacy_review": "No copied cases, real record IDs, account details, local paths, hostnames, credentials, or external links in authored documents.",
+  "source_files_checked_against_inventory": 3,
+  "source_main_sha256": "0dacaa0f94fbef749d96a3a02c37ab9e0d03d02b6bb570f416cee10f7dab3f1d",
+  "source_integrity": "Selected source content matches inventory fingerprints.",
+  "executed_example_assertions": [
+    "service_example_not_new_install",
+    "service_example_has_no_invented_install_date",
+    "unknown_identity_preserved",
+    "missing_record_example_mapping_consistent",
+    "example_field_provenance_resolves"
+  ],
+  "file_sha256": {
+    "SKILL.md": "2881cb023c79bc450894de596294e851d68cb4bedb377dcc050666bb76f8f14e",
+    "references/scope-and-evidence.md": "8e109b253d54e6529766a451e97b85f60c151fabdde3129705d54c03e7e17684",
+    "references/review-schema.md": "838a2ac1fabcf3cfa49d4a49b2f8dc1accf1b5f1376d988e5985bfb88fe18317",
+    "references/mutation-handoff.md": "546901f891f4fa2285c75e3490f1416ef649862f2e82da361e15d4808f4f2c16",
+    "references/synthetic-cases.md": "a6f2a0fc9553e97064480b7a3df32de56fb9f5addada564d315bae05572fcb51",
+    "references/source-decisions.md": "94cf9f44059806ac887069985a08232cd74c61a9b93c0eab923445cdccd02261"
+  },
+  "limitations": [
+    "No network accessed or HCP adapter executed.",
+    "Synthetic JSON examples were parsed and invariant-checked; failure-case tables are specifications, not executed adapter tests.",
+    "Pattern scanning and editorial review do not establish a universal privacy guarantee.",
+    "Licensing clearance and live capability validation remain separate."
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0",
+  "validation_kind": "offline_editorial_package",
+  "status": "passed",
+  "skill": "hcp-alpha-data-collection",
+  "markdown_files_checked": 5,
+  "relative_intra_package_links_checked": 4,
+  "json_examples_parsed": 3,
+  "frontmatter_valid": true,
+  "privacy_pattern_categories": [
+    "absolute_local_path",
+    "network_url",
+    "email",
+    "provider_record",
+    "signed_query",
+    "private_origin",
+    "source_names"
+  ],
+  "privacy_pattern_matches": 0,
+  "manual_privacy_review": "No copied cases, real record IDs, account details, local paths, hostnames, credentials, or external links in authored documents.",
+  "source_files_checked_against_inventory": 5,
+  "source_main_sha256": "499a664ab02dab0c5ca8c5a752f20657a874b0c30cce3ae0168d5a9ae163ffcf",
+  "source_integrity": "Selected source content matches inventory fingerprints.",
+  "executed_example_assertions": [
+    "public_example_row_count_matches_total",
+    "nested_private_example_row_count_matches_total",
+    "unavailable_equipment_receipt_not_complete",
+    "example_job_detail_coverage_reconciles",
+    "example_media_counts_reconcile",
+    "collection_example_has_no_writes"
+  ],
+  "file_sha256": {
+    "SKILL.md": "c56c843d38f5e9eaa54c073ff4843a8562c410b97b831b03bd617d271ce2f9a1",
+    "references/adapter-contract.md": "5654912e759aa00304b643ea6f1f0b4e14dcc09dc9c78a5dda755295b3d028cd",
+    "references/evidence-schema.md": "5b50672182b2b962065e32fc71cfc59e8376f9c1a2da772ff9d02c5a00ed54f6",
+    "references/failure-cases.md": "0d877bb48411f9305a9efa3d61bf636796fb2d0cddb0ff43e0547864c01689f9",
+    "references/source-decisions.md": "0bd2539cacafa06b4752bce64661677bef42b4578cfd08e31fbfce663a1ff8d6"
+  },
+  "limitations": [
+    "No network accessed or HCP adapter executed.",
+    "Synthetic JSON examples were parsed and invariant-checked; failure-case tables are specifications, not executed adapter tests.",
+    "Pattern scanning and editorial review do not establish a universal privacy guarantee.",
+    "Licensing clearance and live capability validation remain separate."
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "tenant_alias": "synthetic-tenant",
+  "company_binding": "external-secret-provider-reference",
+  "default_mode": "read-only",
+  "time_zone": "America/Chicago",
+  "outbound_enabled": false,
+  "internal_web_enabled": false,
+  "field_intelligence_enabled": false,
+  "pricing_policy": "external-reviewed-policy",
+  "cadence_policy": null,
+  "adapter_capabilities": []
+}
