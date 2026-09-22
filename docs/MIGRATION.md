@@ -15,6 +15,10 @@ Do not copy installed sources over this repository or import their case corpus. 
 - **Source scripts:** private session collector and MCP bridge are deliberately not copied: they depended on host/profile helpers and actual server configuration outside their packages. Discover and implement adapters separately rather than shipping nonfunctional wrappers. Pure helpers here have no I/O to providers.
 - **Adjacent source families:** infrastructure deployment, DNS, agent memory/accounting and archived gateways are excluded from HCP domain modules. Retain relevant enablement/rollback/outbound-canary lessons in webhook and communications gates, not host-specific runbooks. Disputed-review investigation uses a date-bounded neutral evidence timeline and separates allegation from corroborated fact; response/publication requires its own authority.
 
+## Internal-session preference
+
+The [authorized session workflow](internal-session-workflow.md) promotes the reusable authorized login → protected session → verified internal HTTP request sequence from historical lessons to discoverable operating guidance. Public APIs remain first when sufficient. Reject historical universal cookies-alone/no-CSRF claims and browser-first collection; verify current headers, schemas and identity instead. No private helper, tenant session, raw trace or live SDK is imported, and observed-internal capability labels are unchanged.
+
 ## Rights and provenance
 
 The included RivetFlo-owned material is released under MIT with explicit owner authorization, including historically proprietary or undeclared material. Historical labels in NOTICE and the source-disposition ledger remain attribution, not present restrictions. Excluded source corpora, tenant data and third-party material are not relicensed.

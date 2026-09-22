@@ -185,6 +185,23 @@ def validate(root):
                 raise ValueError("skill capability copy drift")
     except (OSError, KeyError, TypeError, ValueError) as exc:
         errors.append("capabilities: " + str(exc))
+    # Standalone packages must carry the same instructional session policy.
+    session_source = root / "docs/internal-session-workflow.md"
+    session_owners = {
+        "hcp-operations", "hcp-foundations", "hcp-alpha-data-collection",
+        "hcp-trade-equipment", "hcp-customer-accounts", "hcp-jobs-history",
+        "hcp-pricebook-procurement", "hcp-reference-configuration",
+        "hcp-reporting-exports", "hcp-webhook-recovery",
+    }
+    if not session_source.is_file():
+        errors.append("missing internal-session workflow")
+    else:
+        for owner in sorted(session_owners):
+            copy = root / "skills" / owner / "references/internal-session-workflow.md"
+            if not copy.is_file():
+                errors.append("missing internal-session workflow copy")
+            elif copy.read_bytes() != session_source.read_bytes():
+                errors.append("internal-session workflow copy drift")
     return errors
 
 

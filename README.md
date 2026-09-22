@@ -8,6 +8,10 @@ Start with `hcp-operations`, then `hcp-foundations` and the appropriate domain s
 
 The [capability ledger](docs/capabilities.json) labels official-public, observed-internal, UI-only and unverified operations. Official-public means documentation evidence—not entitlement, implemented transport, complete payload schema or authorization. Sidebar/changelog-only entries need endpoint-body/schema confirmation before use. Verification dates are **2026-09-21 discovery-snapshot attribution**, not independent per-URL fetch timestamps or tenant probes.
 
+## API-first access
+
+Use the supported public API when sufficient. For UI-backed work otherwise, prefer a verified authorized Alpha/internal-session API over UI clicking. Browser use remains appropriate for secure login/MFA/session bootstrap, visual verification and unavailable routes. Follow the [internal-session workflow](docs/internal-session-workflow.md); it requires runtime secure-session/HTTP capability and current tenant, CSRF/header/schema and operation verification. This is instructional guidance, not a bundled live authentication adapter or permission bypass.
+
 ## Prerequisites and setup
 
 - Offline tools: Python 3.10+ standard library; tests exercised with Python 3.12. No pip packages or network needed.

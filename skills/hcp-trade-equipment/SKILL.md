@@ -2,10 +2,14 @@
 name: hcp-trade-equipment
 description: Use when reviewing HCP property equipment. Gate evidence, scope, writes, and exact readback.
 license: MIT
-version: 2.0.0
+version: 2.1.0
 ---
 
 # HCP trade equipment
+
+## API-first execution preference
+
+Use the supported public API when sufficient. For UI-backed tasks otherwise, prefer a verified authorized Alpha/internal-session API over UI clicking. Use the browser for secure login/MFA/session bootstrap, visual verification and unavailable routes, not as the default data transport. Follow the [authorized internal-session workflow](references/internal-session-workflow.md) before using a protected session; it covers tool capability gaps, isolated session jars, identity readback, current CSRF/header/schema checks, exact-operation approval and ambiguity recovery. Access denial is never permission to switch surfaces. No live auth adapter is supplied.
 
 Route a Housecall Pro equipment request to the correct evidence and permission mode. Default to read-only review. This package describes workflows, not an installed API client. Public API reads, private alpha/React reads and writes, and optional Field Intelligence reconciliation have separate capability and authorization boundaries.
 

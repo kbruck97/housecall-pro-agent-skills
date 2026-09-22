@@ -2,10 +2,14 @@
 name: hcp-foundations
 description: Use when selecting HCP access and validating API scope. Establish authentication, capability, pagination, and safety gates.
 license: MIT
-version: 1.0.0
+version: 1.1.0
 ---
 
 # HCP foundations
+
+## API-first execution preference
+
+Use the supported public API when sufficient. For UI-backed tasks otherwise, prefer a verified authorized Alpha/internal-session API over UI clicking. Use the browser for secure login/MFA/session bootstrap, visual verification and unavailable routes, not as the default data transport. Follow the [authorized internal-session workflow](references/internal-session-workflow.md) before using a protected session; it covers tool capability gaps, isolated session jars, identity readback, current CSRF/header/schema checks, exact-operation approval and ambiguity recovery. Access denial is never permission to switch surfaces. No live auth adapter is supplied.
 
 ## Scope and evidence
 
@@ -18,7 +22,7 @@ Keep four questions separate: is the operation documented, is the tenant entitle
 | Surface | Appropriate use | Boundary |
 |---|---|---|
 | Official public API | Documented CRM, catalog, financial reads and explicitly listed writes | API origin `api.housecallpro.com`; exact operation/security schema required |
-| Observed internal web API | Missing property/equipment or billing-parent evidence through an independently authorized adapter | `/alpha` observations are tenant-specific, not the public contract; no silent fallback |
+| Observed internal web API | Preferred over UI clicking for UI-backed tasks not covered by sufficient public APIs, through a verified authorized session adapter | `/alpha` observations are tenant-specific, not the public contract; no silent fallback |
 | UI-only/manual | Admin setup and unsupported operations after owner approval | A UI button does not establish an API endpoint |
 | Field Intelligence (FI) or another integration | Derived evidence, local job state, processing/recovery ledgers | Not HCP; provenance, freshness, authorization, and tenant isolation must be explicit |
 

@@ -1,5 +1,7 @@
 # Adapter contract and bounded collection
 
+Follow the [authorized internal-session workflow](internal-session-workflow.md) for API-first transport selection, secure bootstrap and current authentication/schema checks. This collection skill stays GET-only even though that shared workflow also describes separately authorized writes.
+
 ## Support tiers
 
 | Surface | Allowed default use | Required guard | Not a guarantee |

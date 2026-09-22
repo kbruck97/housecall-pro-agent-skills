@@ -2,10 +2,14 @@
 name: hcp-alpha-data-collection
 description: Use when HCP evidence collection needs scope-safe public or opt-in private alpha reads, pagination, and coverage receipts.
 license: MIT
-version: 1.0.0
+version: 1.1.0
 ---
 
 # HCP evidence collection
+
+## API-first execution preference
+
+Use the supported public API when sufficient. For UI-backed tasks otherwise, prefer a verified authorized Alpha/internal-session API over UI clicking. Use the browser for secure login/MFA/session bootstrap, visual verification and unavailable routes, not as the default data transport. Follow the [authorized internal-session workflow](references/internal-session-workflow.md) before using a protected session; it covers tool capability gaps, isolated session jars, identity readback, current CSRF/header/schema checks, exact-operation approval and ambiguity recovery. Access denial is never permission to switch surfaces. No live auth adapter is supplied.
 
 Collect evidence, not equipment decisions. Default to authorized read-only public capabilities; add private alpha/React reads only through an explicitly opted-in adapter. Neither surface is assumed complete. This package supplies procedures and data contracts, not an executable HCP client, authentication helper, or universal tool catalog.
 

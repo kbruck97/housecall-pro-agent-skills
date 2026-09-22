@@ -2,10 +2,14 @@
 name: hcp-operations
 description: Use when working with Housecall Pro. Route to evidence-grounded domain skills and enforce safe adapter boundaries.
 license: MIT
-version: 1.0.0
+version: 1.1.0
 ---
 
 # Housecall Pro operations router
+
+## API-first execution preference
+
+Use the supported public API when sufficient. For UI-backed tasks otherwise, prefer a verified authorized Alpha/internal-session API over UI clicking. Use the browser for secure login/MFA/session bootstrap, visual verification and unavailable routes, not as the default data transport. Follow the [authorized internal-session workflow](references/internal-session-workflow.md) before using a protected session; it covers tool capability gaps, isolated session jars, identity readback, current CSRF/header/schema checks, exact-operation approval and ambiguity recovery. Access denial is never permission to switch surfaces. No live auth adapter is supplied.
 
 Load hcp-foundations first to establish exact company, credential surface, permission, endpoint evidence and collection completeness. This pack is operational guidance plus offline helpers, not a live HCP SDK. Read-only is the default. No installed tool name, tenant entitlement, private session or outbound authority is implied.
 

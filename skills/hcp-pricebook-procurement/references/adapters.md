@@ -2,6 +2,10 @@
 
 This package is operational knowledge, not an installed HCP SDK. Implementations must supply an explicit adapter and prove its behavior offline before tenant access. Foundations (dependency skill `hcp-foundations`) governs authentication and authority; [capabilities](capabilities.json) contains official source URLs and evidence levels.
 
+## Transport preference
+
+Use the supported public API when sufficient. For UI-backed tasks otherwise, prefer a verified authorized Alpha/internal-session API over UI clicking; reserve the browser for secure login/MFA/session bootstrap, visual verification and unavailable routes. Follow the [authorized internal-session workflow](internal-session-workflow.md), including runtime capability, identity readback, current CSRF/header/schema verification and no access-denial bypass. This preference does not install an adapter or expand authorization.
+
 ## Required request boundary
 
 Accept typed inputs: `tenant_ref`, `company_ref`, `surface`, `operation`, canonical resource references, validated parameters, collection budget, and separately scoped approval reference for mutations. Resolve secrets from a protected provider. Never accept arbitrary model-provided URLs, credentials or cross-tenant selectors. Pin trusted origin, allowed HTTP method/path, exact parameter serializer and response envelope for each operation.
