@@ -26,3 +26,7 @@ The included RivetFlo-owned material is released under MIT with explicit owner a
 This candidate is a privacy-safe distillation, not a lossless copy of thousands of historical case notes. Explicit source-family mappings do not imply every historical reference is redistributed or reviewed as current. Specialist and journey drafts read substantive main variants and selected reusable references; customer-bearing cases and backups were intentionally excluded. The equipment umbrella source main changed after discovery; its reference records this drift. Do not claim a frozen full-corpus byte-preservation audit.
 
 Keep the private source manifest and variant-to-hash resolver under operator control outside this repository. No source-profile files were changed as part of packaging. Installed behavior, tenant onboarding and live capability testing are separate approved work.
+
+## Local connection addition
+
+The new `hcp-connections` package supplies an optional, bounded login/identity helper built for this public distribution. It does not import a private server helper or any tenant credentials. Dedicated interactive login replaces ordinary-browser cookie extraction as the reusable path. Each company is keyed by trusted UUID, validated live and stored separately; only missing/unauthenticated state prompts for login. Native vault-held keys protect encrypted local files. The helper is not a general internal API SDK, and Windows/macOS first-run login and vault behavior remain unverified until exercised on that machine.

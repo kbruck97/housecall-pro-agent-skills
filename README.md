@@ -1,6 +1,6 @@
 # Housecall Pro agent skills
 
-**MIT licensed.** This is a modular operational skill pack with executable offline validation/packaging helpers, **not an HCP SDK or an installed live integration**. No credentials, customer case corpus, profile configuration or private path/hash inventory is distributed. The included RivetFlo-owned material is released with explicit owner authorization under [MIT](LICENSE); historical attribution is preserved in [NOTICE](NOTICE.md). Housecall Pro has not endorsed this independent project.
+**MIT licensed.** This is a modular operational skill pack with executable offline validation/packaging helpers and an optional local connection helper, **not a general HCP SDK or an installed live integration**. No credentials, customer case corpus, profile configuration or private path/hash inventory is distributed. The included RivetFlo-owned material is released with explicit owner authorization under [MIT](LICENSE); historical attribution is preserved in [NOTICE](NOTICE.md). Housecall Pro has not endorsed this independent project.
 
 ## Use
 
@@ -10,13 +10,14 @@ The [capability ledger](docs/capabilities.json) labels official-public, observed
 
 ## API-first access
 
-Use the supported public API when sufficient. For UI-backed work otherwise, prefer a verified authorized Alpha/internal-session API over UI clicking. Browser use remains appropriate for secure login/MFA/session bootstrap, visual verification and unavailable routes. Follow the [internal-session workflow](docs/internal-session-workflow.md); it requires runtime secure-session/HTTP capability and current tenant, CSRF/header/schema and operation verification. This is instructional guidance, not a bundled live authentication adapter or permission bypass.
+Use the supported public API when sufficient. For UI-backed work otherwise, prefer a verified authorized Alpha/internal-session API over UI clicking. Browser use remains appropriate for secure login/MFA/session bootstrap, visual verification and unavailable routes. Follow the [internal-session workflow](docs/internal-session-workflow.md); it requires runtime secure-session/HTTP capability and current tenant, CSRF/header/schema and operation verification. For local interactive sign-in and separate saved company sessions, use [hcp-connections](skills/hcp-connections/SKILL.md). Its optional helper verifies identity and stores encrypted sessions locally; it does not provide business operations or a permission bypass. Native Windows/macOS login and vault behavior still require first-run verification.
 
 ## Prerequisites and setup
 
-- Offline tools: Python 3.10+ standard library; tests exercised with Python 3.12. No pip packages or network needed.
+- Offline tools: Python 3.10+ standard library; base tests exercised with Python 3.12; the local-connection update passed the full synthetic suite on macOS with Python 3.14. No pip packages or network needed for distribution/contract checks. To run all optional connection encryption tests without skips, install the connection skill's requirements in an isolated test environment.
 - Agent consumption: a Hermes-compatible skill loader, or an agent that reads SKILL.md directly. No automatic production installation.
-- Optional runtime: supply your own tenant-isolated public API, private-web, FI, communications and scheduling adapters under the [adapter contract](docs/adapters.md). Keys/sessions/OTP stay in the deployment's secret provider. No private auth/session helper from source profiles is bundled.
+- Optional connection runtime: [setup](skills/hcp-connections/references/setup.md) uses Python, Playwright/Chromium, keyring and cryptography. Session encryption keys stay in the native OS vault; encrypted company sessions stay on that computer. No VPS or shared cookie environment is needed.
+- Business-operation runtime: supply your own tenant-isolated public API, private-web, FI, communications and scheduling adapters under the [adapter contract](docs/adapters.md). Keys/sessions/OTP stay in the deployment's secret provider. No private auth/session helper from source profiles is bundled.
 - Public auth: read-only key preferred, `Token` scheme; partner OAuth uses `Bearer`. Confirm MAX/XL entitlement conflict with the tenant administrator.
 
 Run from repository root:
@@ -26,7 +27,11 @@ PYTHONDONTWRITEBYTECODE=1 python3 scripts/validate.py
 PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests -v
 ```
 
-On a shared production host follow its fleet lock, nice/load policy before tests; the generic commands above do not acquire site-specific locks. Tests use synthetic in-memory inputs and fresh temporary snapshots only. They validate contract helpers—not actual APIs, live OCR, equipment adapters, consent language classification or a complete sender.
+On a shared production host follow its fleet lock, nice/load policy before tests; the generic commands above do not acquire site-specific locks. Tests use synthetic inputs, fake vault/HTTP/browser dependencies and fresh temporary snapshots only. They validate contract helpers—not actual APIs, live OCR, equipment adapters, consent language classification or a complete sender.
+
+## Local sessions across companies
+
+The agent checks the requested company's saved session before asking for login. Missing/expired sessions trigger an interactive official HCP sign-in; passwords and MFA stay on that page. After exact company verification, each session is stored separately. Returning to company B after connecting A–E loads B's record and verifies B again. API keys in 1Password remain separate; they do not create website cookies. See [the connection skill](skills/hcp-connections/SKILL.md) for execution and storage paths.
 
 ## Build and stage locally
 
@@ -53,4 +58,4 @@ Staging is not installing. To test one skill, read its staged `skills/<name>/SKI
 
 ## Remaining gaps / no claims
 
-No live API/auth/entitlement, browser session, OCR engine, provider sender, FI store or write adapter was exercised. No public equipment/charge/refund/invoice-send/service-plan CRUD is established. Checklist schemas, standalone appointments, employee writes and generic audit/report APIs remain unverified. No CI-hosted run, production installation, deployment or tenant validation is implied. Historical source inventory drift is documented, not represented as a frozen-corpus audit. The root [maintenance adapter](AGENTS.md) is included in validation and packages. See [distribution policy](docs/DISTRIBUTION.md) for the public export boundary. Automated privacy patterns are a safety net, not proof against all PII; review the complete distribution before sharing.
+The new connection helper has synthetic coverage; native Windows/macOS login, real OS-vault storage and HCP session reuse have not been exercised by this release. No live entitlement, OCR engine, provider sender, FI store or write adapter was exercised. No public equipment/charge/refund/invoice-send/service-plan CRUD is established. Checklist schemas, standalone appointments, employee writes and generic audit/report APIs remain unverified. No CI-hosted run, production installation, deployment or tenant validation is implied. Historical source inventory drift is documented, not represented as a frozen-corpus audit. The root [maintenance adapter](AGENTS.md) is included in validation and packages. See [distribution policy](docs/DISTRIBUTION.md) for the public export boundary. Automated privacy patterns are a safety net, not proof against all PII; review the complete distribution before sharing.

@@ -2,7 +2,7 @@
 name: hcp-reporting-exports
 description: Use when deriving HCP reports or exports. Reconcile scoped resources, financial allocations, freshness, and privacy without sending data.
 license: MIT
-version: 1.0.0
+version: 1.2.0
 ---
 
 # HCP reporting and exports

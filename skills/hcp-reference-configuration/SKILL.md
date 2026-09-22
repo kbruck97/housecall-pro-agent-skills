@@ -2,7 +2,7 @@
 name: hcp-reference-configuration
 description: Use when inspecting HCP company and reference settings. Map documented catalogs, configuration authority, and unresolved operations.
 license: MIT
-version: 1.0.0
+version: 1.2.0
 ---
 
 # HCP reference and configuration

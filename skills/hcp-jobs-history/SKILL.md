@@ -2,7 +2,7 @@
 name: hcp-jobs-history
 description: Use when auditing HCP jobs and source evidence. Build scoped histories, normalize states, and protect attachments and write boundaries.
 license: MIT
-version: 1.0.0
+version: 1.2.0
 ---
 
 # HCP jobs and history

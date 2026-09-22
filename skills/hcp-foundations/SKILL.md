@@ -2,14 +2,14 @@
 name: hcp-foundations
 description: Use when selecting HCP access and validating API scope. Establish authentication, capability, pagination, and safety gates.
 license: MIT
-version: 1.1.0
+version: 1.2.0
 ---
 
 # HCP foundations
 
 ## API-first execution preference
 
-Use the supported public API when sufficient. For UI-backed tasks otherwise, prefer a verified authorized Alpha/internal-session API over UI clicking. Use the browser for secure login/MFA/session bootstrap, visual verification and unavailable routes, not as the default data transport. Follow the [authorized internal-session workflow](references/internal-session-workflow.md) before using a protected session; it covers tool capability gaps, isolated session jars, identity readback, current CSRF/header/schema checks, exact-operation approval and ambiguity recovery. Access denial is never permission to switch surfaces. No live auth adapter is supplied.
+Use the supported public API when sufficient. For UI-backed tasks otherwise, prefer a verified authorized Alpha/internal-session API over UI clicking. Use the browser for secure login/MFA/session bootstrap, visual verification and unavailable routes, not as the default data transport. Follow the [authorized internal-session workflow](references/internal-session-workflow.md) before using a protected session; it covers tool capability gaps, isolated session jars, identity readback, current CSRF/header/schema checks, exact-operation approval and ambiguity recovery. Access denial is never permission to switch surfaces. For local login and per-company session reuse, load `hcp-connections`; its optional helper handles connection identity only, not arbitrary business operations.
 
 ## Scope and evidence
 
@@ -29,6 +29,8 @@ Keep four questions separate: is the operation documented, is the tenant entitle
 A hybrid key that once accessed an internal path does not make that path officially public. Partner Jobs is separately onboarded and is not the normal Pro API for accounting, workflow, marketing, or subcontractor tools.
 
 ## Authentication and company scope
+
+For internal web sessions, use `hcp-connections`: check the requested company's saved session first; prompt for interactive HCP sign-in only when missing or expired; save only after exact company verification. Public keys in 1Password do not supply website sessions.
 
 1. Resolve the exact tenant/company from trusted configuration, not model-generated names or incoming free text. Refuse conflicting company selectors.
 2. Prefer an Admin-issued **Read-only** API key for discovery. Official Help documents Full access and Read-only keys; only Admin users generate/delete them.

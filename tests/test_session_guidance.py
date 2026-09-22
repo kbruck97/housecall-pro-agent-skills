@@ -11,7 +11,7 @@ from validate import validate
 
 
 OWNERS = (
-    "hcp-operations", "hcp-foundations", "hcp-alpha-data-collection",
+    "hcp-operations", "hcp-foundations", "hcp-connections", "hcp-alpha-data-collection",
     "hcp-trade-equipment", "hcp-customer-accounts", "hcp-jobs-history",
     "hcp-pricebook-procurement", "hcp-reference-configuration",
     "hcp-reporting-exports", "hcp-webhook-recovery",

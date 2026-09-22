@@ -2,7 +2,7 @@
 name: hcp-customer-accounts
 description: Use when reviewing HCP customers and addresses. Resolve identity, preserve service-property scope, and expose account-history gaps.
 license: MIT
-version: 1.0.0
+version: 1.2.0
 ---
 
 # HCP customer accounts

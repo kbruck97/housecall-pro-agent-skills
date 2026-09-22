@@ -7,11 +7,20 @@ from pathlib import Path
 import re
 import sys
 
+# Third-party packages are confined to the optional connection helper and its tests.
+OPTIONAL_RUNTIME_IMPORTS = {
+    "skills/hcp-connections/scripts/local_sessions.py": {"playwright", "keyring", "cryptography"},
+    "tests/test_local_sessions.py": {"local_sessions", "cryptography"},
+}
+OPTIONAL_REQUIREMENTS = {
+    "playwright>=1.49,<2", "keyring>=25,<26", "cryptography>=44,<49",
+}
+
 ROOT_FILES = {"AGENTS.md", "README.md", "LICENSE", "NOTICE.md", "DOCUMENT_INDEX.md"}
 ROOT_DIRS = {"skills", "docs", "scripts", "tests", "examples", "schemas"}
 EXCLUDED_FILES = {"docs/PLAN.md"}
 REQUIRED_SKILLS = {
-    "hcp-operations", "hcp-foundations", "hcp-customer-accounts", "hcp-jobs-history",
+    "hcp-operations", "hcp-foundations", "hcp-connections", "hcp-customer-accounts", "hcp-jobs-history",
     "hcp-scheduling", "hcp-estimate-follow-up", "hcp-invoice-follow-up", "hcp-pricebook-procurement",
     "hcp-lead-follow-up", "hcp-reference-configuration", "hcp-reporting-exports", "hcp-webhook-recovery",
     "hcp-alpha-data-collection", "hcp-equipment-evidence-adjudication", "hcp-equipment-nameplate-extraction",
@@ -135,7 +144,7 @@ def validate(root):
                 for node in ast.walk(tree):
                     modules = [a.name for a in node.names] if isinstance(node, ast.Import) else ([node.module] if isinstance(node, ast.ImportFrom) and node.level == 0 else [])
                     for module in modules:
-                        if module and module.split(".")[0] not in sys.stdlib_module_names | {"contracts", "validate", "package"}:
+                        if module and module.split(".")[0] not in sys.stdlib_module_names | {"contracts", "validate", "package"} | OPTIONAL_RUNTIME_IMPORTS.get(rel, set()):
                             errors.append(rel + ": undeclared dependency " + module)
             except SyntaxError as exc:
                 errors.append(rel + ": syntax " + str(exc))
@@ -144,6 +153,14 @@ def validate(root):
                 json.loads(text)
             except ValueError:
                 errors.append(rel + ": invalid JSON")
+    requirements_path = root / "skills/hcp-connections/requirements.txt"
+    try:
+        requirements = {line.strip() for line in requirements_path.read_text().splitlines()
+                        if line.strip() and not line.lstrip().startswith("#")}
+        if requirements != OPTIONAL_REQUIREMENTS:
+            errors.append("optional connection dependency manifest drift")
+    except OSError:
+        errors.append("missing optional connection dependency manifest")
     if names != REQUIRED_SKILLS:
         errors.append("skill coverage mismatch: " + str(sorted(names ^ REQUIRED_SKILLS)))
     try:
@@ -188,7 +205,7 @@ def validate(root):
     # Standalone packages must carry the same instructional session policy.
     session_source = root / "docs/internal-session-workflow.md"
     session_owners = {
-        "hcp-operations", "hcp-foundations", "hcp-alpha-data-collection",
+        "hcp-operations", "hcp-foundations", "hcp-connections", "hcp-alpha-data-collection",
         "hcp-trade-equipment", "hcp-customer-accounts", "hcp-jobs-history",
         "hcp-pricebook-procurement", "hcp-reference-configuration",
         "hcp-reporting-exports", "hcp-webhook-recovery",
