@@ -117,3 +117,12 @@ Public distribution navigation; source of truth is each versioned file. No live 
 - [skills/hvac-equipment-reference-lookup/references/source-decisions.md](skills/hvac-equipment-reference-lookup/references/source-decisions.md)
 - [skills/hvac-equipment-reference-lookup/references/synthetic-cases.md](skills/hvac-equipment-reference-lookup/references/synthetic-cases.md)
 - [skills/hvac-equipment-reference-lookup/references/validation-receipt.md](skills/hvac-equipment-reference-lookup/references/validation-receipt.md)
+
+## Local connection package
+
+- [skills/hcp-connections/SKILL.md](skills/hcp-connections/SKILL.md)
+- [skills/hcp-connections/references/setup.md](skills/hcp-connections/references/setup.md)
+- [skills/hcp-connections/references/internal-session-workflow.md](skills/hcp-connections/references/internal-session-workflow.md)
+- [skills/hcp-connections/requirements.txt](skills/hcp-connections/requirements.txt)
+- [skills/hcp-connections/scripts/local_sessions.py](skills/hcp-connections/scripts/local_sessions.py)
+- [tests/test_local_sessions.py](tests/test_local_sessions.py)

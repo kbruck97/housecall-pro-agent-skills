@@ -2,7 +2,7 @@
 name: hcp-pricebook-procurement
 description: Use when reviewing HCP catalogs and draft BOMs. Separate documented pricebook operations from procurement release authority.
 license: MIT
-version: 1.0.0
+version: 1.2.0
 ---
 
 # HCP pricebook and procurement readiness

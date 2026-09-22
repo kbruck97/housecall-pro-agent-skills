@@ -1,6 +1,6 @@
 # Housecall Pro skill repository maintenance
 
-Read README.md, docs/MIGRATION.md, docs/OFFLINE_CONTRACTS.md and NOTICE.md before editing. This repository provides reusable skills and offline helpers, not a live HCP integration.
+Read README.md, docs/MIGRATION.md, docs/OFFLINE_CONTRACTS.md and NOTICE.md before editing. This repository provides reusable skills, offline helpers and an optional local connection helper, not a general live HCP integration. Connection helpers must keep platform/live validation claims separate from synthetic checks.
 
 ## Work boundaries
 

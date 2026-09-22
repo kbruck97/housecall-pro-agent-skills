@@ -2,7 +2,7 @@
 name: hcp-webhook-recovery
 description: Use when validating HCP webhooks or recovering gaps. Separate signed receipt, durable processing, reconciliation, and replay authority.
 license: MIT
-version: 1.0.0
+version: 1.2.0
 ---
 
 # HCP webhooks and recovery
